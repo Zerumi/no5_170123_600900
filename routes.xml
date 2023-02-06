@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 
 <route>
-	<id>1234567890123</id>
+	<id>
+		1234567890123
+	</id>
 	<name>Гойда</name>
 	<coordinates>
+		122313
 		<x>1.435477</x>
 		<y>2.314</y>
 	</coordinates>

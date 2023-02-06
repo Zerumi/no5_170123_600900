@@ -6,11 +6,11 @@ import java.util.HashSet;
 
 public class Main {
     public static final String ENV_KEY = "path";
-    private static HashSet<Route> routes;
+    private static HashSet<Route> routes = new HashSet<>();
 
     public static void main(String[] args) {
-        Loader<HashSet<Route>, Route> loader = new Loader<>();
+        Loader<HashSet<Route>, Route> loader = new Loader<>(routes.getClass(), Route.class);
 
-        loader.loadFromXML(routes, ENV_KEY);
+        routes = loader.loadFromXML(ENV_KEY);
     }
 }
