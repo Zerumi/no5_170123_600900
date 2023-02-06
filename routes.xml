@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<route>
+	<id>1234567890123</id>
+	<name>Гойда</name>
+	<coordinates>
+		<x>1.435477</x>
+		<y>2.314</y>
+	</coordinates>
+	<creationDate>date_example</creationDate>
+	<from>
+		<x>2.314</x>
+		<y>1234567890123</y>
+		<z>1234567890123</z>
+		<name>ITMO</name>
+	</from>
+	<to>
+		<x>2.314</x>
+		<y>1234567890123</y>
+		<z>1234567890123</z>
+		<name>ITMO</name>
+	</to>
+	<distance>1342432</distance>
+</route>
