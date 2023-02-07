@@ -43,7 +43,6 @@ public class Loader<T extends Collection<E>, E> {
         try {
             resultCollection = tClass.newInstance();
             buildingObject = buildElement();
-            addObjectToCollection(buildingObject);
         }
         catch (Exception e)
         {
@@ -90,6 +89,7 @@ public class Loader<T extends Collection<E>, E> {
             LinkedHashMap<String[], String> parsedValues = reader.readXML(xmlPath);
 
             fillCollection(parsedValues);
+
         } catch (IOException e) {
             myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
         }
@@ -99,6 +99,9 @@ public class Loader<T extends Collection<E>, E> {
 
     private void fillCollection(LinkedHashMap<String[], String> parsedValues) {
         parsedValues.forEach(this::addFieldToElement);
+
+        myLogger.log(Level.FINE, "adding last...");
+        addObjectToCollection(buildingObject); // add last
     }
 
     private int latestKnownIndex = 0;
@@ -131,8 +134,9 @@ public class Loader<T extends Collection<E>, E> {
             else
             {
                 // build new
-                buildingObject = buildElement();
+                myLogger.log(Level.FINE, "adding object...");
                 addObjectToCollection(buildingObject);
+                buildingObject = buildElement();
             }
         }
 

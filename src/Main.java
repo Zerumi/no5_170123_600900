@@ -23,13 +23,10 @@ public class Main {
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
+        // load collection
         Loader<HashSet<Route>, Route> loader = new Loader<>(routes.getClass(), Route.class);
-
         routes = loader.loadFromXMLbyEnvKey(ENV_KEY);
 
-        for (var a : routes)
-        {
-            System.out.println(a.hashCode());
-        }
+        // commands
     }
 }

@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Model of Route. Main model of the program. Contains getters/setters of each class fields.
@@ -135,5 +136,31 @@ public class Route {
      */
     public void setTo(Location to) {
         this.to = to;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Route route = (Route) o;
+        return distance == route.distance && id.equals(route.id) && name.equals(route.name) && coordinates.equals(route.coordinates) && creationDate.equals(route.creationDate) && Objects.equals(from, route.from) && Objects.equals(to, route.to);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, coordinates, creationDate, from, to, distance);
+    }
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", coordinates=" + coordinates +
+                ", creationDate=" + creationDate +
+                ", from=" + from +
+                ", to=" + to +
+                ", distance=" + distance +
+                '}';
     }
 }
