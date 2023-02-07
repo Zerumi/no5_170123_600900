@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"exceptions"},{"l":"fileLogic"},{"l":"fileLogic.editors"},{"l":"models"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"commandManager"},{"l":"commandManager.commands"},{"l":"exceptions"},{"l":"fileLogic"},{"l":"fileLogic.editors"},{"l":"models"},{"l":"models.comparators"},{"l":"models.handlers"},{"l":"models.validators"}];updateSearchResults();

@@ -1,5 +1,10 @@
 unnamed package
+commandManager
+commandManager.commands
 exceptions
 fileLogic
 fileLogic.editors
 models
+models.comparators
+models.handlers
+models.validators
