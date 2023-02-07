@@ -1,7 +1,11 @@
+import commandManager.CommandExecutor;
 import fileLogic.Loader;
 import models.Route;
+import models.handlers.CollectionHandler;
+import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
+import java.util.logging.Logger;
 
 /**
  * Program entry point class. Contains main() method.
@@ -12,22 +16,30 @@ import java.util.HashSet;
  */
 public class Main {
 
+    private static Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
+
     /**
      * Environment key to XML file for store collection.
      */
     public static final String ENV_KEY = "lab5";
-    private static HashSet<Route> routes = new HashSet<>();
 
     /**
      * Program entry point.
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
+        CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
+
         // load collection
-        Loader<HashSet<Route>, Route> loader = new Loader<>(routes.getClass(), Route.class);
-        routes = loader.loadFromXMLbyEnvKey(ENV_KEY);
+        Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
+        handler.setCollection(loader.loadFromXMLbyEnvKey(ENV_KEY));
+        System.out.println("Loaded " + handler.getCollection().size() + " elements total.");
+        System.out.println();
 
         // commands
-
+        System.out.println("Welcome to CLI! Now you are operating with collection of type " + handler.getCollection().getClass().getName() + ", filled with elements of type " + handler.getFirstOrNew().getClass().getName());
+        System.out.println("Now you can enter the commands. Use help for reference.");
+        CommandExecutor executor = new CommandExecutor();
+        executor.startExecuting(System.in);
     }
 }

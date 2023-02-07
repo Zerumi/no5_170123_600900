@@ -10,7 +10,7 @@ import java.util.Objects;
  * @since 1.0
  * @author zerumi
  */
-public class Route {
+public class Route implements Comparable<Route> {
     private Long id;
     private String name;
     private Coordinates coordinates;
@@ -162,5 +162,15 @@ public class Route {
                 ", to=" + to +
                 ", distance=" + distance +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Route o) {
+        if (this.id - o.id < 0)
+            return -1;
+        else if (this.id == o.id)
+            return 0;
+        else
+            return 1;
     }
 }

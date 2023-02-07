@@ -80,6 +80,13 @@ public class Loader<T extends Collection<E>, E> {
     {
         try {
             String xmlPath = System.getenv(envKey);
+            if (xmlPath == null)
+            {
+                myLogger.log(Level.SEVERE, "Отсутствует переменная окружения с путем к загрузочному файлу!");
+                myLogger.log(Level.INFO, "Задайте переменную окружения с именем \"lab5\", поместив туда полный путь к XML файлу.");
+                myLogger.log(Level.WARNING, "Выполнение программы не может быть продолжено.");
+                System.exit(-1);
+            }
 
             BaseReader reader = new XMLReader();
             LinkedHashMap<String[], String> parsedValues = reader.readFromFile(xmlPath);
