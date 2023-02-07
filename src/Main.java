@@ -1,6 +1,5 @@
+import fileLogic.Loader;
 import models.Route;
-import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.ParserAdapter;
 
 import java.util.HashSet;
 
@@ -11,6 +10,11 @@ public class Main {
     public static void main(String[] args) {
         Loader<HashSet<Route>, Route> loader = new Loader<>(routes.getClass(), Route.class);
 
-        routes = loader.loadFromXML(ENV_KEY);
+        routes = loader.loadFromXMLbyEnvKey(ENV_KEY);
+
+        for (var a : routes)
+        {
+            System.out.println(a.hashCode());
+        }
     }
 }

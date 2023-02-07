@@ -29,4 +29,6 @@ public class Route {
      * Значение поля должно быть больше 1
      */
     private int distance;
+
+
 }

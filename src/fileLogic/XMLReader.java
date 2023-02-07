@@ -1,10 +1,15 @@
+package fileLogic;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class XMLReader {
 
+    private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
     private final LinkedHashMap<String[], String> resultParsing;
 
     private final ArrayDeque<String> values;
@@ -68,7 +73,10 @@ public class XMLReader {
                 keys[i++] = key;
             }
 
+            myLogger.log(Level.FINE, Arrays.toString(keys) + " " + values.getLast());
+
             resultParsing.put(keys, values.getLast());
+            values.removeLast();
         }
     }
 
