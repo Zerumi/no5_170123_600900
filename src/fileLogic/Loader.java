@@ -1,6 +1,6 @@
 package fileLogic;
 
-import editors.DateEditor;
+import fileLogic.editors.DateEditor;
 
 import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;
@@ -51,7 +51,7 @@ public class Loader<T extends Collection<E>, E> {
     }
 
 
-    private void setupConverter() {
+    private static void setupConverter() {
         PropertyEditorManager.registerEditor(Date.class, DateEditor.class);
     }
 
@@ -63,8 +63,7 @@ public class Loader<T extends Collection<E>, E> {
      *
      * @see PropertyEditor
      */
-
-    public void setupConverter(Class<?> typeToEdit, Class<? extends PropertyEditor> editor)
+    public static void setupConverter(Class<?> typeToEdit, Class<? extends PropertyEditor> editor)
     {
         PropertyEditorManager.registerEditor(typeToEdit, editor);
     }
@@ -80,13 +79,10 @@ public class Loader<T extends Collection<E>, E> {
     public T loadFromXMLbyEnvKey(String envKey)
     {
         try {
-            //String xmlPath = System.getenv(envKey);
-            // fix envVariable
-            //String xmlPath = "D:\\Zerumi\\ЛАБЫ ПРОГА 2022\\no5_170123_600900\\routes.xml";
-            String xmlPath = "/Users/zerumi/IdeaProjects/no5_170123_600900/routes.xml";
+            String xmlPath = System.getenv(envKey);
 
-            XMLReader reader = new XMLReader();
-            LinkedHashMap<String[], String> parsedValues = reader.readXML(xmlPath);
+            BaseReader reader = new XMLReader();
+            LinkedHashMap<String[], String> parsedValues = reader.readFromFile(xmlPath);
 
             fillCollection(parsedValues);
 
@@ -94,6 +90,24 @@ public class Loader<T extends Collection<E>, E> {
             myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
         }
 
+        return resultCollection;
+    }
+
+    /**
+     * Abstract method to read any file by any reader.
+     * @param path Path to file
+     * @param reader File reader
+     * @return
+     */
+    public T loadFromFile(String path, BaseReader reader)
+    {
+        try
+        {
+            LinkedHashMap<String[], String> parsedValues = reader.readFromFile(path);
+            fillCollection(parsedValues);
+        } catch (IOException e) {
+            myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
+        }
         return resultCollection;
     }
 

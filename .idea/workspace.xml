@@ -4,56 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="loader final + javadoc">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="Models get/set updated, javadoc">
+      <change afterPath="$PROJECT_DIR$/src/fileLogic/BaseReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fileLogic/BaseWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/Main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/editors/DateEditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/editors/DateEditor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/editors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/editors/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/editors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/editors/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/exceptions/IrregularPathToFieldException.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/exceptions/IrregularPathToFieldException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/exceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/exceptions/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/exceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/exceptions/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/Loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/Loader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/Saver.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/Saver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/XMLReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/XMLReader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/XMLWriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/XMLWriter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/fileLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/fileLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/element-list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/models/Coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/models/Coordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/models/Location.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/models/Location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/models/Route.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/models/Route.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/models/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/models/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/models/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/models/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/type-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/editors/DateEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -125,7 +104,8 @@
       <workItem from="1675699998348" duration="26986000" />
       <workItem from="1675730711316" duration="107000" />
       <workItem from="1675730824916" duration="135000" />
-      <workItem from="1675730971587" duration="6568000" />
+      <workItem from="1675730971587" duration="8839000" />
+      <workItem from="1675769234920" duration="1208000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -148,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675735659623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Models get/set updated, javadoc">
+      <created>1675737676282</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675737676282</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +145,7 @@
     <MESSAGE value="add XML Reader" />
     <MESSAGE value="loader, part 2" />
     <MESSAGE value="loader final + javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="loader final + javadoc" />
+    <MESSAGE value="Models get/set updated, javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models get/set updated, javadoc" />
   </component>
 </project>

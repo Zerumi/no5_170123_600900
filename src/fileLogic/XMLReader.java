@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * @since 1.0
  * @author zerumi
  */
-public class XMLReader {
+public class XMLReader implements BaseReader {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
     private final LinkedHashMap<String[], String> resultParsing;
@@ -41,7 +41,7 @@ public class XMLReader {
      * @return Map of read items
      * @throws IOException If an I/O occurs opening source
      */
-    public LinkedHashMap<String[], String> readXML(String path) throws IOException {
+    public LinkedHashMap<String[], String> readFromFile(String path) throws IOException {
         Scanner scanner = new Scanner(Path.of(path));
         scanner.nextLine(); // skip 1st line
 

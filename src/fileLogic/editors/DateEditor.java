@@ -1,4 +1,4 @@
-package editors;
+package fileLogic.editors;
 
 import java.awt.*;
 import java.beans.PropertyChangeListener;
@@ -7,10 +7,21 @@ import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.util.Date;
 
+/**
+ * Example of editor, that uses in fileLogic to convert String into object.
+ * You should register your editor class in Loader by using their static method.
+ *
+ * @see java.beans.PropertyEditorManager
+ * @since 1.0
+ * @author zerumi
+ */
 public class DateEditor implements PropertyEditor {
 
-    Date result;
+    private Date result;
 
+    /**
+     * Default constructor
+     */
     public DateEditor()
     {
         result = new Date();

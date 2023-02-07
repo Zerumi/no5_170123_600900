@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
  * @since 1.0
  * @author zerumi
  */
-public class XMLWriter {
+public class XMLWriter implements BaseWriter {
     /**
      * Under construction
      */
