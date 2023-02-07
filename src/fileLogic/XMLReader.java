@@ -7,6 +7,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
+/**
+ * XML Reader class for <code>Loader</code> class. It reads XML file by given path and provides
+ * <code>LinkedHashMap&#8249;String[], String></code>, where <code>String[]</code> is XML path to <code>String</code> value.
+ *
+ * @see LinkedHashMap
+ * @since 1.0
+ * @author zerumi
+ */
 public class XMLReader {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
@@ -15,6 +23,10 @@ public class XMLReader {
     private final ArrayDeque<String> values;
 
     private final ArrayList<String> currentKeys;
+
+    /**
+     * Default constructor of XMLReader.
+     */
     public XMLReader()
     {
         resultParsing = new LinkedHashMap<>();
@@ -23,11 +35,11 @@ public class XMLReader {
     }
 
     /**
-     * Reads XML file by path and returns parsed String[]/String map.
+     * Reads XML file by path and returns parsed <code>String[]</code>/<code>String</code> map.
      *
      * @param path path to XML file
      * @return Map of read items
-     * @throws IOException
+     * @throws IOException If an I/O occurs opening source
      */
     public LinkedHashMap<String[], String> readXML(String path) throws IOException {
         Scanner scanner = new Scanner(Path.of(path));

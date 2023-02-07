@@ -12,10 +12,14 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 /**
- * Abstract loader class. It uses java.lang.reflect API for changing fields taken from XML file
- * and converted by java.beans.PropertyEditor.
+ * Abstract loader class. It uses <code>java.lang.reflect</code> API for changing fields taken from XML file
+ * and converted by <code>java.beans.PropertyEditor</code>. It fills Elements of type E to collection of type T
  * @param <T> Collection to fill
  * @param <E> Type of collection elements
+ * @see java.lang.reflect
+ * @see java.beans.PropertyEditor
+ * @since 1.0
+ * @author zerumi
  */
 
 public class Loader<T extends Collection<E>, E> {
@@ -29,8 +33,8 @@ public class Loader<T extends Collection<E>, E> {
     /**
      * Initializer of fileLogic.Loader class.
      *
-     * @param tClass Class of T. Should be provided due to Java's generic types restriction.
-     * @param eClass Class of E. Should be provided due to Java's generic types restriction.
+     * @param tClass Class of <code>T</code>. Should be provided due to Java's generic types restriction.
+     * @param eClass Class of <code>E</code>. Should be provided due to Java's generic types restriction.
      */
     public Loader(Class<T> tClass, Class<E> eClass)
     {
@@ -134,7 +138,6 @@ public class Loader<T extends Collection<E>, E> {
 
         // set field value
 
-
         for (int i = 2; i < pathToField.length; i++)
         {
             try {
@@ -157,7 +160,11 @@ public class Loader<T extends Collection<E>, E> {
         if (currentIndex != fullPath.length)
         {
             U nextObject = (U) fieldToSet.get(object);
-            if (nextObject == null) nextObject = nextType.newInstance();
+            if (nextObject == null)
+            {
+                nextObject = nextType.newInstance();
+                fieldToSet.set(object, nextObject);
+            }
             setField(nextType, fullPath, currentIndex, value, nextObject);
         }
         else
