@@ -91,7 +91,8 @@ public class Loader<T extends Collection<E>, E> {
             BaseReader reader = new XMLReader();
             LinkedHashMap<String[], String> parsedValues = reader.readFromFile(xmlPath);
 
-            fillCollection(parsedValues);
+            if (!parsedValues.isEmpty())
+                fillCollection(parsedValues);
 
         } catch (IOException e) {
             myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);

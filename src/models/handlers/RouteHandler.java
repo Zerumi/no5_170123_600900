@@ -81,6 +81,10 @@ public class RouteHandler implements ModuleHandler<Route>{
             LocationHandler locationHandler = new LocationHandler();
             result.setFrom(locationHandler.buildObjectByCLI());
         }
+        if (scanner.hasNextLine())
+        {
+            scanner.nextLine();
+        }
 
         // to (may null)
         System.out.println("Starting \"to\" field setup... (Type: Location)");
@@ -90,6 +94,10 @@ public class RouteHandler implements ModuleHandler<Route>{
         {
             LocationHandler locationHandler = new LocationHandler();
             result.setTo(locationHandler.buildObjectByCLI());
+        }
+        if (scanner.hasNextLine())
+        {
+            scanner.nextLine();
         }
 
         // distance

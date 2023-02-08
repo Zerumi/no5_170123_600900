@@ -45,6 +45,8 @@ public class XMLWriter implements BaseWriter {
     int lastKnownI = 0;
     private void writeElement(PrintWriter writer, String[] address, String[] nextAddress, String value)
     {
+        if (value == null) return;
+
         for (int i = lastKnownI; i < address.length; i++)
         {
             for (int j = 0; j < i + 1; j++)
