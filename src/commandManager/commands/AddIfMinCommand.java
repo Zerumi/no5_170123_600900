@@ -8,6 +8,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Adds element if it's value lower than min value.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class AddIfMinCommand implements BaseCommand {
     @Override
     public String getName() {

@@ -6,14 +6,25 @@ import models.validators.IdValidator;
 import models.validators.NameValidator;
 import models.validators.Validator;
 
-import java.util.Date;
 import java.time.Instant;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Current implementation of ModuleHandler for Route Model.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class RouteHandler implements ModuleHandler<Route>{
+    /**
+     * Method for create fully validated objects by CLI.
+     *
+     * @return Built object
+     */
     @Override
     public Route buildObjectByCLI() {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();

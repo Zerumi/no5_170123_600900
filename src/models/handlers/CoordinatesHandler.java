@@ -7,8 +7,19 @@ import models.validators.CoordYValidator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Current implementation of ModuleHandler for Coordinates Model.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class CoordinatesHandler implements ModuleHandler<Coordinates> {
 
+    /**
+     * Method for create fully validated objects by CLI.
+     *
+     * @return Built object
+     */
     @Override
     public Coordinates buildObjectByCLI() {
         System.out.println("Generating object...");

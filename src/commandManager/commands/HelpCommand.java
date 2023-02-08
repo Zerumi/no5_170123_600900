@@ -2,8 +2,12 @@ package commandManager.commands;
 
 import commandManager.CommandManager;
 
-import java.util.Arrays;
-
+/**
+ * Shows reference about available commands.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class HelpCommand implements BaseCommand {
     @Override
     public String getName() {
@@ -21,9 +25,7 @@ public class HelpCommand implements BaseCommand {
 
         if (args.length == 1)
         {
-            manager.getCommands().forEach((name,command) -> {
-                System.out.println(name + " " + command.getArgs() + " --  " + command.getDescr());
-            });
+            manager.getCommands().forEach((name,command) -> System.out.println(name + " " + command.getArgs() + " --  " + command.getDescr()));
         }
         else
         {

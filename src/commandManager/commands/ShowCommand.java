@@ -6,6 +6,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Shows every element of the collection in toString() interpretation.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class ShowCommand implements BaseCommand {
     @Override
     public String getName() {

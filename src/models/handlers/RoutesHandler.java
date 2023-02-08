@@ -4,39 +4,67 @@ import models.Route;
 import models.comparators.RouteComparator;
 
 import java.time.Instant;
-import java.util.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.stream.Collectors;
 
+/**
+ * Current implementation of CollectionsHandler for HashSet of Route.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
 
     private static RoutesHandler singletoneMoment;
 
     private HashSet<Route> routes;
-    private Date initDate;
+    private final Date initDate;
 
     private RoutesHandler() {
         routes = new HashSet<>();
         initDate = Date.from(Instant.now());
     }
 
+    /**
+     * Singletone moment.
+     *
+     * @return Single instance of handler.
+     */
     public static RoutesHandler getInstance() {
         if (singletoneMoment == null)
             singletoneMoment = new RoutesHandler();
         return singletoneMoment;
     }
 
+    /**
+     * Returns actual collection reference.
+     *
+     * @return Current collection
+     */
     @Override
     public HashSet<Route> getCollection()
     {
         return routes;
     }
 
+    /**
+     * Overrides current collection by provided value.
+     *
+     * @param routes Collection
+     */
     @Override
     public void setCollection(HashSet<Route> routes) {
         this.routes = routes;
         sort();
     }
 
+    /**
+     * Adds element to collection.
+     *
+     * @param e Element to add
+     */
     @Override
     public void addElementToCollection(Route e)
     {
@@ -83,10 +111,8 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     public Route getLastElement()
     {
         Route result = null;
-        var iterator = routes.iterator();
-        while (iterator.hasNext())
-        {
-            result = iterator.next();
+        for (Route route : routes) {
+            result = route;
         }
         return result;
     }

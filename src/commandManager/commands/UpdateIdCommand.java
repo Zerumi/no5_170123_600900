@@ -1,6 +1,5 @@
 package commandManager.commands;
 
-import commandManager.CommandExecutor;
 import commandManager.CommandManager;
 import exceptions.UnknownCommandException;
 import models.Route;
@@ -11,6 +10,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Updates element by its ID.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class UpdateIdCommand implements BaseCommand {
     @Override
     public String getName() {
@@ -19,7 +24,7 @@ public class UpdateIdCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Updates element by it's ID";
+        return "Updates element by it's ID.";
     }
 
     @Override

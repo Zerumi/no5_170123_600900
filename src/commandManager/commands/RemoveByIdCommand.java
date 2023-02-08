@@ -6,6 +6,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Removes element from collection by id.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class RemoveByIdCommand implements BaseCommand {
 
     @Override
@@ -15,7 +21,7 @@ public class RemoveByIdCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Removes element from collection by id";
+        return "Removes element from collection by id.";
     }
     @Override
     public String getArgs() {
@@ -25,13 +31,7 @@ public class RemoveByIdCommand implements BaseCommand {
     public void execute(String[] args) {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        var iterator = collectionHandler.getCollection().iterator();
-
-        while (iterator.hasNext())
-        {
-            if(iterator.next().getId() == Long.parseLong(args[1]))
-                iterator.remove();
-        }
+        collectionHandler.getCollection().removeIf(route -> route.getId() == Long.parseLong(args[1]));
 
         System.out.println("Executed.");
     }

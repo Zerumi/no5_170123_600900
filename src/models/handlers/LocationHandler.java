@@ -7,7 +7,18 @@ import models.validators.LocationYZValidator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Current implementation of ModuleHandler for Location Model.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class LocationHandler implements ModuleHandler<Location> {
+    /**
+     * Method for create fully validated objects by CLI.
+     *
+     * @return Built object
+     */
     @Override
     public Location buildObjectByCLI() {
         System.out.println("Generating object...");

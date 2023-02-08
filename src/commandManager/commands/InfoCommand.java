@@ -4,9 +4,14 @@ import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 
-import java.util.AbstractCollection;
 import java.util.HashSet;
 
+/**
+ * Shows information about the collection.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class InfoCommand implements BaseCommand {
     @Override
     public String getName() {

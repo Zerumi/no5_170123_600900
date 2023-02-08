@@ -101,10 +101,10 @@ public class Loader<T extends Collection<E>, E> {
     }
 
     /**
-     * Abstract method to read any file by any reader.
+     * Abstract method to read any collection from any file by any reader.
      * @param path Path to file
      * @param reader File reader
-     * @return
+     * @return Collection with elements matched by file
      */
     public T loadFromFile(String path, BaseReader reader)
     {

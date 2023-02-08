@@ -4,7 +4,6 @@ import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;
 import java.lang.reflect.Field;
 import java.util.*;
-import java.util.logging.Level;
 
 /**
  * Abstract saver class. (Under construction)
@@ -24,6 +23,13 @@ public class Saver<T extends Collection<E>, E> {
     {
         fullClassOfElement = eClass;
     }
+
+    /**
+     * Saves provided collection into file by environment key.
+     *
+     * @param collection Current collection to save
+     * @param envKey Environment key to filepath
+     */
     public void saveCollection(T collection, String envKey)
     {
         String xmlPath = System.getenv(envKey);

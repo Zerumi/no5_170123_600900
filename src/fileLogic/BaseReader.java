@@ -12,5 +12,12 @@ import java.util.LinkedHashMap;
  */
 public interface BaseReader {
 
+    /**
+     * Base method for reading file and providing Address-Value interpretation of this File.
+     *
+     * @param path Full path to file.
+     * @return Collection of values with full address from File.
+     * @throws IOException When something will go wrong during file handling
+     */
     LinkedHashMap<String[], String> readFromFile(String path) throws IOException;
 }

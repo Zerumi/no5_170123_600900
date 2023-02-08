@@ -5,9 +5,17 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Class for executing commands. Provides different inputs for command executing.
+ */
 public class CommandExecutor {
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
+    /**
+     * Start executing commands from InputStream.
+     *
+     * @param input commands stream (File, System.in, e.t.c.)
+     */
     public void startExecuting(InputStream input)
     {
         CommandManager commandManager = new CommandManager();

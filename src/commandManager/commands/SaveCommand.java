@@ -7,6 +7,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Saves collection to file.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class SaveCommand implements BaseCommand {
     @Override
     public String getName() {

@@ -7,6 +7,12 @@ import models.handlers.RoutesHandler;
 import java.util.Date;
 import java.util.HashSet;
 
+/**
+ * Returns element from collection with min creation date.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class MinByCreationDateCommand implements BaseCommand{
     @Override
     public String getName() {
@@ -26,16 +32,10 @@ public class MinByCreationDateCommand implements BaseCommand{
         if (min == null)
         {
             System.out.println("There's nothing to show...");
-            return;
         }
         else
         {
-            var iterator = collectionHandler.getCollection().iterator();
-
-            while (iterator.hasNext())
-            {
-                var obj = iterator.next();
-
+            for (Route obj : collectionHandler.getCollection()) {
                 if (obj.getCreationDate().equals(min))
                     System.out.println(obj);
             }

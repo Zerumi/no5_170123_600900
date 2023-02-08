@@ -9,6 +9,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Removes elements from collection greater than given in argument.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class RemoveGreaterCommand implements BaseCommand {
     @Override
     public String getName() {
@@ -17,7 +23,7 @@ public class RemoveGreaterCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Removes elements from collection greater than given in argument";
+        return "Removes elements from collection greater than given in argument.";
     }
 
     @Override

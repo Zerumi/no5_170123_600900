@@ -2,20 +2,26 @@ package commandManager;
 
 import commandManager.commands.*;
 import exceptions.UnknownCommandException;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
 
 import java.util.LinkedHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Command Manager for interactive
+ * Command Manager for interactive collection manage. For execute commands, use CommandExecutor class
+ *
+ * @see CommandExecutor
+ * @since 1.0
+ * @author Zerumi
  */
 public class CommandManager {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
     LinkedHashMap<String, BaseCommand> commands;
+
+    /**
+     * Setup command manager and all of its commands.
+     */
     public CommandManager()
     {
         commands = new LinkedHashMap<>();
@@ -38,10 +44,21 @@ public class CommandManager {
         commands.put("print_field_ascending_distance", new PrintFieldDistanceAscendingCommand());
     }
 
+    /**
+     * Get all commands from manager.
+     *
+     * @return Map of loaded commands
+     */
     public LinkedHashMap<String, BaseCommand> getCommands() {
         return commands;
     }
 
+    /**
+     * Universe method for command executing.
+     *
+     * @param args full separated line from stream
+     * @throws UnknownCommandException If command isn't found.
+     */
     public void executeCommand(String[] args) throws UnknownCommandException {
         try {
             commands.get(args[0]).execute(args);
@@ -56,10 +73,5 @@ public class CommandManager {
         {
             myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за возникшей проблемы: " + e);
         }
-    }
-
-    public static CollectionHandler getModelHandler()
-    {
-        return RoutesHandler.getInstance();
     }
 }

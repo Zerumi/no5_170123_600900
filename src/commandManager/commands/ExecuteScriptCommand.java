@@ -8,6 +8,12 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Reads and executes script from file.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class ExecuteScriptCommand implements BaseCommand {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");

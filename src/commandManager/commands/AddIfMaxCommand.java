@@ -8,7 +8,13 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
-public class AddIfMaxCommand implements BaseCommand{
+/**
+ * Add element if it's value greater than max value.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
+public class AddIfMaxCommand implements BaseCommand {
     @Override
     public String getName() {
         return "add_if_max";

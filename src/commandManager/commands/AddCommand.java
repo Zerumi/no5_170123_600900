@@ -8,6 +8,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Adds new element to collection.
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class AddCommand implements BaseCommand {
     @Override
     public String getName() {

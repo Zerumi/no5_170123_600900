@@ -5,6 +5,12 @@ import models.Route;
 import java.util.Comparator;
 import java.util.Objects;
 
+/**
+ * Compare two Routes by HashCode
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class RouteHashComparator implements Comparator<Route> {
     @Override
     public int compare(Route o1, Route o2) {

@@ -6,6 +6,12 @@ import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
 
+/**
+ * Clears collection
+ *
+ * @since 1.0
+ * @author Zerumi
+ */
 public class ClearCommand implements BaseCommand {
     @Override
     public String getName() {
