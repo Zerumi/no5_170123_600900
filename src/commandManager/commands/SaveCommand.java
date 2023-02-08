@@ -10,12 +10,12 @@ import java.util.HashSet;
 public class SaveCommand implements BaseCommand {
     @Override
     public String getName() {
-        return null;
+        return "save";
     }
 
     @Override
     public String getDescr() {
-        return null;
+        return "Saves collection to file.";
     }
 
     @Override

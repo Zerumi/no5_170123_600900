@@ -4,32 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="commands, part 2">
-      <change afterPath="$PROJECT_DIR$/src/models/comparators/RouteHashComparator.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="docs for last commit">
+      <change afterPath="$PROJECT_DIR$/src/models/handlers/LocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/DistanceValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/LocationNameValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/LocationYZValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/UpdateIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/BaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/BaseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/editors/DateEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Route.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/LocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/LocationHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/NameValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.5/lib/src.zip!/java.base/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,7 +115,7 @@
       <workItem from="1675730824916" duration="135000" />
       <workItem from="1675730971587" duration="8839000" />
       <workItem from="1675769234920" duration="29421000" />
-      <workItem from="1675840478759" duration="21322000" />
+      <workItem from="1675840478759" duration="6817000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -173,14 +173,7 @@
       <option name="project" value="LOCAL" />
       <updated>1675810103452</updated>
     </task>
-    <task id="LOCAL-00009" summary="commands, part 2">
-      <created>1675847533723</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1675847533723</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +189,6 @@
     <MESSAGE value="docs" />
     <MESSAGE value="commands, part 1; handlers + validators" />
     <MESSAGE value="docs for last commit" />
-    <MESSAGE value="commands, part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="commands, part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs for last commit" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package fileLogic;
 
+import java.beans.PropertyEditor;
+import java.beans.PropertyEditorManager;
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.logging.Level;
@@ -42,7 +44,8 @@ public class Saver<T extends Collection<E>, E> {
             for (Field field : fields) {
                 try {
                     ArrayList<String> address = new ArrayList<>();
-                    address.add(fullClassOfElement.getCanonicalName().toLowerCase() + iter);
+                    String[] canonicalNameSplitted = fullClassOfElement.getCanonicalName().toLowerCase().split("\\.");
+                    address.add(canonicalNameSplitted[canonicalNameSplitted.length - 1] + iter);
                     addToCollection(obj, field, address);
                 } catch (IllegalAccessException ignored) {
                 }
@@ -54,13 +57,16 @@ public class Saver<T extends Collection<E>, E> {
     }
 
     private void addToCollection(Object obj, Field field, ArrayList<String> currentAddress) throws IllegalAccessException {
+        field.setAccessible(true);
+        Object objValue = field.get(obj);
+
         if (Wrapper.isWrapperType(field.getType()))
         {
             // primitive
-            Object objValue = field.get(obj); // don't go next (??)
+            String value = convert(field.getType(), objValue);
 
-            String value = objValue.toString();
-
+            String fieldNameToAddress = field.getName();
+            currentAddress.add(fieldNameToAddress);
             String[] address = new String[currentAddress.size()];
 
             for (int i = 0; i < address.length; i++)
@@ -70,16 +76,22 @@ public class Saver<T extends Collection<E>, E> {
 
             result.put(address, value);
         }
-        else if (field.get(obj) == null) return;
-        else
+        else if (objValue != null)
         {
             Field[] fields = field.getType().getDeclaredFields();
+            currentAddress.add(field.getName());
             for (Field fieldType : fields)
             {
-                currentAddress.add(field.getName());
-                addToCollection(obj, fieldType, currentAddress);
+                addToCollection(objValue, fieldType, currentAddress);
+                currentAddress.remove(currentAddress.size() - 1);
             }
         }
+    }
+
+    private String convert(Class<?> targetType, Object obj) {
+        PropertyEditor editor = PropertyEditorManager.findEditor(targetType);
+        editor.setValue(obj);
+        return editor.getAsText();
     }
 
     private static class Wrapper
@@ -104,6 +116,15 @@ public class Saver<T extends Collection<E>, E> {
             ret.add(Double.class);
             ret.add(Void.class);
             ret.add(Date.class);
+            ret.add(String.class);
+            ret.add(boolean.class);
+            ret.add(char.class);
+            ret.add(byte.class);
+            ret.add(short.class);
+            ret.add(int.class);
+            ret.add(long.class);
+            ret.add(float.class);
+            ret.add(double.class);
             return ret;
         }
     }

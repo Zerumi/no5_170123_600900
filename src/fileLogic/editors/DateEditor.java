@@ -53,7 +53,7 @@ public class DateEditor implements PropertyEditor {
 
     @Override
     public String getAsText() {
-        return null;
+        return result.toInstant().toString();
     }
 
     @Override
