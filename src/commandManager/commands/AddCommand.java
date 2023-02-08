@@ -25,5 +25,7 @@ public class AddCommand implements BaseCommand {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         collectionHandler.addElementToCollection(handler.buildObjectByCLI());
+
+        System.out.println("Element added!");
     }
 }

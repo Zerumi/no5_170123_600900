@@ -48,7 +48,7 @@ public class CommandManager {
         }
         catch (NullPointerException e)
         {
-            UnknownCommandException transfer = new UnknownCommandException("Указанная команда не была обнаружена.");
+            UnknownCommandException transfer = new UnknownCommandException("Указанная команда не была обнаружена и/или был предоставлен некорректный аргумент.");
             transfer.initCause(e);
             throw transfer;
         }

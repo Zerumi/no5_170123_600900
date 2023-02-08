@@ -22,5 +22,10 @@ public class ShowCommand implements BaseCommand {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
 
         handler.getCollection().forEach(System.out::println);
+
+        if (handler.getCollection().isEmpty())
+        {
+            System.out.println("There's nothing to show.");
+        }
     }
 }

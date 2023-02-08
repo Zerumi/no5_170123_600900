@@ -166,6 +166,8 @@ public class Route implements Comparable<Route> {
 
     @Override
     public int compareTo(Route o) {
+        if (o == null) return 1;
+        if (o.id == null) return -1;
         if (this.id - o.id < 0)
             return -1;
         else if (this.id == o.id)

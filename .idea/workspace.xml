@@ -4,44 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="docs">
-      <change afterPath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commandManager/commands/UpdateIdCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/comparators/RouteComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/validators/IdValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/validators/NameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/validators/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="docs for last commit">
+      <change afterPath="$PROJECT_DIR$/src/models/handlers/LocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/DistanceValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/LocationNameValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/LocationYZValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/IrregularPathToFieldException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/IrregularPathToFieldException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/IrregularPathToFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/UnknownCommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/NameValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,22 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="models.validators" />
+      <recent name="models.handlers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="no5_170123_600900" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -120,7 +106,8 @@
       <workItem from="1675730711316" duration="107000" />
       <workItem from="1675730824916" duration="135000" />
       <workItem from="1675730971587" duration="8839000" />
-      <workItem from="1675769234920" duration="28765000" />
+      <workItem from="1675769234920" duration="29421000" />
+      <workItem from="1675840478759" duration="6817000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -164,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675771666792</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commands, part 1; handlers + validators">
+      <created>1675810034037</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675810034037</updated>
+    </task>
+    <task id="LOCAL-00008" summary="docs for last commit">
+      <created>1675810103452</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675810103452</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +179,8 @@
     <MESSAGE value="Models get/set updated, javadoc" />
     <MESSAGE value="loader env_value fixed + base reader abstract level added" />
     <MESSAGE value="docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs" />
+    <MESSAGE value="commands, part 1; handlers + validators" />
+    <MESSAGE value="docs for last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs for last commit" />
   </component>
 </project>
