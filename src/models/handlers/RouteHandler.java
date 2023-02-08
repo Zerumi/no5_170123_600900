@@ -87,14 +87,20 @@ public class RouteHandler implements ModuleHandler<Route>{
             try {
                 DistanceValidator validator = new DistanceValidator();
                 System.out.println("Enter the value of distance (Type: int)");
-                int value = scanner.nextInt();
+                int value = 0;
+                if (scanner.hasNextLine())
+                {
+                    String line = scanner.nextLine();
+                    if (!line.isEmpty())
+                        value = Integer.parseInt(line);
+                }
                 if (!validator.validate(value))
                 {
                     System.out.println("Value violates restrictions for field! Try again.");
                     continue;
                 }
                 result.setDistance(value);
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | NumberFormatException e) {
                 System.out.println("Wrong input! Try again.");
                 continue;
             }

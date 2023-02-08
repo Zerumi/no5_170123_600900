@@ -41,6 +41,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     public void addElementToCollection(Route e)
     {
         routes.add(e);
+        sort();
     }
 
     @Override

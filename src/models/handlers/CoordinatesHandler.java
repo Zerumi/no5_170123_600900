@@ -38,7 +38,7 @@ public class CoordinatesHandler implements ModuleHandler<Coordinates> {
                     System.out.println("Value violates restrictions for field! Try again.");
                     continue;
                 }
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | NumberFormatException e) {
                 System.out.println("Wrong input! Try again.");
                 continue;
             }
@@ -64,7 +64,7 @@ public class CoordinatesHandler implements ModuleHandler<Coordinates> {
                     System.out.println("Value violates restrictions for field! Try again.");
                     continue;
                 }
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | NumberFormatException e) {
                 System.out.println("Wrong input! Try again.");
                 continue;
             }

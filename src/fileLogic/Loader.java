@@ -198,7 +198,7 @@ public class Loader<T extends Collection<E>, E> {
             {
                 fieldToSet.set(object, convert(nextType, value));
             }
-            catch (NullPointerException e)
+            catch (NullPointerException | NumberFormatException e)
             {
                 myLogger.log(Level.WARNING, "XML файл поврежден. Строка с данными " + value + " (Адрес: " + Arrays.toString(fullPath) + ") была пропущена.");
                 myLogger.log(Level.INFO, "Если вы считаете, что произошла ошибка, добавьте в регистр обработчик. Взгляните на Loader.setupConverter в Javadoc.");

@@ -20,6 +20,11 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
+    public String getArgs() {
+        return "{element}";
+    }
+
+    @Override
     public void execute(String[] args) {
         ModuleHandler<Route> handler = new RouteHandler();
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();

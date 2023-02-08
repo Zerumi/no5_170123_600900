@@ -48,7 +48,7 @@ public class XMLReader implements BaseReader {
         while (scanner.hasNext())
         {
             String line = scanner.nextLine();
-            line = line.replaceAll("\\t", "");
+            line = line.trim();
             if (line.isEmpty()) continue;
 
             String[] regexSplittedLine = line.split("<.*?>");

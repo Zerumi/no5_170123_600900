@@ -22,7 +22,7 @@ public class HelpCommand implements BaseCommand {
         if (args.length == 1)
         {
             manager.getCommands().forEach((name,command) -> {
-                System.out.println(name + " -- " + command.getDescr());
+                System.out.println(name + " " + command.getArgs() + " --  " + command.getDescr());
             });
         }
         else

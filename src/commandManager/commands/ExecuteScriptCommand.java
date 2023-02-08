@@ -22,6 +22,10 @@ public class ExecuteScriptCommand implements BaseCommand {
     }
 
     @Override
+    public String getArgs() {
+        return "file_path";
+    }
+    @Override
     public void execute(String[] args) throws IllegalArgumentException {
         try {
             CommandExecutor executor = new CommandExecutor();

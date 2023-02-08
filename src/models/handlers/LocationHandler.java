@@ -30,7 +30,7 @@ public class LocationHandler implements ModuleHandler<Location> {
                         value = Float.parseFloat(line);
                 }
                 result.setX(value);
-            } catch (InputMismatchException e)
+            } catch (InputMismatchException | NumberFormatException e)
             {
                 System.out.println("Wrong input! Try again.");
                 continue;
@@ -57,7 +57,7 @@ public class LocationHandler implements ModuleHandler<Location> {
                     continue;
                 }
                 result.setY(value);
-            } catch (InputMismatchException e)
+            } catch (InputMismatchException | NumberFormatException e)
             {
                 System.out.println("Wrong input! Try again.");
                 continue;
@@ -82,7 +82,7 @@ public class LocationHandler implements ModuleHandler<Location> {
                     continue;
                 }
                 result.setZ(value);
-            } catch (InputMismatchException e)
+            } catch (InputMismatchException | NumberFormatException e)
             {
                 System.out.println("Wrong input! Try again.");
                 continue;
