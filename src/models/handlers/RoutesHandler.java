@@ -2,10 +2,12 @@ package models.handlers;
 
 import models.Route;
 import models.comparators.RouteComparator;
+import models.validators.*;
 
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.stream.Collectors;
 
@@ -57,6 +59,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     @Override
     public void setCollection(HashSet<Route> routes) {
         this.routes = routes;
+        validateElements();
         sort();
     }
 
@@ -115,5 +118,32 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
             result = route;
         }
         return result;
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void validateElements() {
+        for (Iterator<Route> it = getCollection().iterator(); it.hasNext(); ) {
+            Route toValid = it.next();
+            Validator<Route> validator = (route) -> new NameValidator().validate(route.getName())
+                    && new DistanceValidator().validate(route.getDistance())
+                    && new CoordXValidator().validate(route.getCoordinates().getX())
+                    && new CoordYValidator().validate(route.getCoordinates().getY())
+                    && new LocationYZValidator().validate(route.getFrom().getY())
+                    && new LocationYZValidator().validate(route.getFrom().getZ())
+                    && new LocationYZValidator().validate(route.getTo().getY())
+                    && new LocationYZValidator().validate(route.getTo().getZ())
+                    && new LocationNameValidator().validate(route.getFrom().getName())
+                    && new LocationNameValidator().validate(route.getTo().getName());
+
+            if (!validator.validate(toValid))
+            {
+                it.remove();
+                System.out.println("Element removed from collection: " + toValid);
+                System.out.println("This element violates the restriction of some fields. Check your file and fix it manually.");
+            }
+        }
     }
 }

@@ -65,4 +65,9 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
      * @return Last element. If collection was empty, returns null.
      */
     E getLastElement();
+
+    /**
+     * Provides method for validate elements in collection.
+     */
+    void validateElements();
 }

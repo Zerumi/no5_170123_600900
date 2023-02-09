@@ -25,7 +25,7 @@ public class XMLWriter implements BaseWriter {
             writer.println("<?xml version=\"1.0\"?>");
             writer.println();
             writer.println("<routes>");
-            values.forEach((address, value) -> writeElement(writer, address, Objects.requireNonNullElseGet(getNextEntry(values, address), () -> new AbstractMap.SimpleEntry<>(new String[0], "")).getKey(), value));
+            values.forEach((address, value) -> writeElement(writer, address, getNextAddress(values, address), value));
             writer.println("</routes>");
 
         } catch (FileNotFoundException e) {
@@ -61,7 +61,7 @@ public class XMLWriter implements BaseWriter {
         }
         writer.println(value);
         for (lastKnownI = address.length; lastKnownI > 0; lastKnownI--) {
-            myLogger.fine("Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address) + " / lastI: " + lastKnownI);
+            myLogger.info("Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address) + " / lastI: " + lastKnownI);
             if (nextAddress.length < lastKnownI || !Objects.equals(nextAddress[lastKnownI - 1], address[lastKnownI - 1])) {
                 for (int j = 0; j < lastKnownI; j++) {
                     writer.print("\t");
@@ -72,14 +72,14 @@ public class XMLWriter implements BaseWriter {
         }
     }
 
-    private Map.Entry<String[], String> getNextEntry(LinkedHashMap<String[], String> map, String[] key) {
+    private String[] getNextAddress(LinkedHashMap<String[], String> map, String[] key) {
         List<String[]> keys = new ArrayList<>(map.keySet());
         int index = keys.indexOf(key);
 
         if (index < 0 || index >= keys.size() - 1)
-            return null;
+            return new String[0];
 
         String[] k = keys.get(index + 1);
-        return Map.entry(k, map.get(k));
+        return Objects.requireNonNullElseGet(k, () -> new String[0]);
     }
 }

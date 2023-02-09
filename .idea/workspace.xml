@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="javadocs updated full">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="commands, part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.5/lib/src.zip!/java.base/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,7 +95,7 @@
       <workItem from="1675730824916" duration="135000" />
       <workItem from="1675730971587" duration="8839000" />
       <workItem from="1675769234920" duration="29421000" />
-      <workItem from="1675840478759" duration="6817000" />
+      <workItem from="1675840478759" duration="21322000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -156,48 +153,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675810103452</updated>
     </task>
-    <task id="LOCAL-00009" summary="commands finished">
-      <created>1675885417534</created>
+    <task id="LOCAL-00009" summary="commands, part 2">
+      <created>1675847533723</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1675885417534</updated>
+      <updated>1675847533723</updated>
     </task>
-    <task id="LOCAL-00010" summary="javadocs updated full">
-      <created>1675894716388</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1675894716388</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add XML Reader" />
     <MESSAGE value="loader, part 2" />
@@ -207,9 +176,21 @@
     <MESSAGE value="docs" />
     <MESSAGE value="commands, part 1; handlers + validators" />
     <MESSAGE value="docs for last commit" />
-    <MESSAGE value="commands finished" />
-    <MESSAGE value="javadocs updated full" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadocs updated full" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="commands, part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commands, part 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/fileLogic/XMLWriter.java</url>
+          <line>27</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
