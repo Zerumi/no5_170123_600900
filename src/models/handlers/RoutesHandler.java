@@ -1,14 +1,13 @@
 package models.handlers;
 
+import models.Coordinates;
+import models.Location;
 import models.Route;
 import models.comparators.RouteComparator;
 import models.validators.*;
 
 import java.time.Instant;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -128,15 +127,15 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
         for (Iterator<Route> it = getCollection().iterator(); it.hasNext(); ) {
             Route toValid = it.next();
             Validator<Route> validator = (route) -> new NameValidator().validate(route.getName())
-                    && new DistanceValidator().validate(route.getDistance())
-                    && new CoordXValidator().validate(route.getCoordinates().getX())
-                    && new CoordYValidator().validate(route.getCoordinates().getY())
-                    && new LocationYZValidator().validate(route.getFrom().getY())
-                    && new LocationYZValidator().validate(route.getFrom().getZ())
-                    && new LocationYZValidator().validate(route.getTo().getY())
-                    && new LocationYZValidator().validate(route.getTo().getZ())
-                    && new LocationNameValidator().validate(route.getFrom().getName())
-                    && new LocationNameValidator().validate(route.getTo().getName());
+                    && new DistanceValidator().validate(Optional.of(route).map(Route::getDistance).orElse(0))
+                    && new CoordXValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getX).orElse(0d))
+                    && new CoordYValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getY).orElse(null))
+                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getY).orElse(0L))
+                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getZ).orElse(0L))
+                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getY).orElse(0L))
+                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getZ).orElse(0L))
+                    && new LocationNameValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getName).orElse(null))
+                    && new LocationNameValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getName).orElse(null));
 
             if (!validator.validate(toValid))
             {
