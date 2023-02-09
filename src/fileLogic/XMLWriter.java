@@ -22,6 +22,9 @@ public class XMLWriter implements BaseWriter {
     @Override
     public void writeToFile(String path, LinkedHashMap<String[], String> values) {
         try (PrintWriter writer = new PrintWriter(path)) {
+
+            while (values.values().remove(null));
+
             writer.println("<?xml version=\"1.0\"?>");
             writer.println();
             writer.println("<routes>");
@@ -53,6 +56,7 @@ public class XMLWriter implements BaseWriter {
             {
                 writer.print("\t");
             }
+            myLogger.info("Opening: " + address[i] + "Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address));
             writer.println("<" + address[i] + ">");
         }
         for (int j = 0; j < address.length + 1; j++)
@@ -67,6 +71,7 @@ public class XMLWriter implements BaseWriter {
                     writer.print("\t");
                 }
                 writer.println("</" + address[lastKnownI - 1] + ">");
+                myLogger.info("Closing: " + address[lastKnownI - 1]);
             }
             else break;
         }

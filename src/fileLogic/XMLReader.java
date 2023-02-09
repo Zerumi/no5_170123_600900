@@ -43,6 +43,13 @@ public class XMLReader implements BaseReader {
      */
     public LinkedHashMap<String[], String> readFromFile(String path) throws IOException {
         Scanner scanner = new Scanner(Path.of(path));
+
+        if (!scanner.hasNextLine())
+        {
+            System.out.println("XML file violates XML format and was skipped.");
+            return resultParsing;
+        }
+
         scanner.nextLine(); // skip 1st line
 
         while (scanner.hasNext())
