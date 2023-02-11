@@ -8,7 +8,9 @@ import models.handlers.RouteHandlers;
 import models.validators.RouteValidator;
 import models.validators.Validator;
 
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -93,6 +95,8 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
             System.out.println("To: " + result.getTo());
             result.setDistance(Integer.parseInt(values.get(values.size() - 1)));
             System.out.println("Distance: " + result.getDistance());
+            result.setCreationDate(Date.from(Instant.now()));
+            System.out.println("Generated at: " + result.getCreationDate());
             System.out.println("Object generated! Validating result...");
 
             Validator<Route> validator = new RouteValidator();
