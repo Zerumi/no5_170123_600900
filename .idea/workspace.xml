@@ -4,8 +4,140 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug fixes, part 2.2 (final)">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="critical solid violate fixed, building objects by nonCLI added">
+      <change afterPath="$PROJECT_DIR$/docs/commandManager/CommandMode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/commandManager/commands/UpdateCommand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/RouteHandlers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/RouteNonCLIHandler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/CoordinatesCLIHandler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/LocationCLIHandler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/RouteCLIHandler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/models/validators/RouteValidator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commandManager/CommandMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/handlers/RouteHandlers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/RouteValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandExecutor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMaxCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMaxCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMinCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMinCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/BaseCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/BaseCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ClearCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ClearCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/CountGreaterThanDistanceCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/CountGreaterThanDistanceCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ExecuteScriptCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ExecuteScriptCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ExitCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ExitCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/HelpCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/HelpCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/InfoCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/InfoCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/MinByCreationDateCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/MinByCreationDateCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/PrintFieldDistanceAscendingCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/PrintFieldDistanceAscendingCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/RemoveByIdCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/RemoveByIdCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/RemoveGreaterCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/RemoveGreaterCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/SaveCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/SaveCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ShowCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ShowCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/UpdateIdCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/UpdateIdCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/commandManager/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/BaseWriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/BaseWriter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/Loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/Loader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/Saver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/Saver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/XMLReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/XMLReader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/XMLWriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/XMLWriter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/editors/DateEditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/editors/DateEditor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/editors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/editors/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/editors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/editors/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fileLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-19.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" afterPath="$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION" beforeDir="false" afterPath="$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/docs/legal/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/Coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Coordinates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/Location.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/Route.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Route.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteComparator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteHashComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteHashComparator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/comparators/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/comparators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CollectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CollectionHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/ModuleHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/ModuleHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/RouteHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/RouteHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/RoutesHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/RoutesHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/CoordXValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/CoordXValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/CoordYValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/CoordYValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/DistanceValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/DistanceValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/IdValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/IdValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/LocationNameValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/LocationNameValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/LocationYZValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/LocationYZValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/NameValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/NameValidator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/Validator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/Validator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/validators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CoordinatesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/LocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,15 +149,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.5/lib/src.zip!/java.base/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,26 +171,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="models.validators" />
       <recent name="models.handlers" />
+      <recent name="models.validators" />
     </key>
   </component>
   <component name="RunManager">
@@ -95,7 +226,7 @@
       <workItem from="1675730824916" duration="135000" />
       <workItem from="1675730971587" duration="8839000" />
       <workItem from="1675769234920" duration="29421000" />
-      <workItem from="1675840478759" duration="6817000" />
+      <workItem from="1675840478759" duration="21322000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -153,55 +284,27 @@
       <option name="project" value="LOCAL" />
       <updated>1675810103452</updated>
     </task>
-    <task id="LOCAL-00009" summary="commands finished">
-      <created>1675885417534</created>
+    <task id="LOCAL-00009" summary="commands, part 2">
+      <created>1675847533723</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1675885417534</updated>
+      <updated>1675847533723</updated>
     </task>
-    <task id="LOCAL-00010" summary="javadocs updated full">
-      <created>1675894716388</created>
+    <task id="LOCAL-00010" summary="bug fix, part 2.1">
+      <created>1675949377935</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1675894716388</updated>
+      <updated>1675949377935</updated>
     </task>
-    <task id="LOCAL-00011" summary="bug fixes, part 2.2 (final)">
-      <created>1675954125711</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675954125711</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add XML Reader" />
     <MESSAGE value="loader, part 2" />
@@ -211,10 +314,20 @@
     <MESSAGE value="docs" />
     <MESSAGE value="commands, part 1; handlers + validators" />
     <MESSAGE value="docs for last commit" />
-    <MESSAGE value="commands finished" />
-    <MESSAGE value="javadocs updated full" />
-    <MESSAGE value="bug fixes, part 2.2 (final)" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes, part 2.2 (final)" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="commands, part 2" />
+    <MESSAGE value="bug fix, part 2.1" />
+    <MESSAGE value="critical solid violate fixed, building objects by nonCLI added" />
+    <option name="LAST_COMMIT_MESSAGE" value="critical solid violate fixed, building objects by nonCLI added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/models/handlers/RouteHandlers.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
-package models.handlers;
+package models.handlers.userMode;
 
 import models.Location;
+import models.handlers.ModuleHandler;
 import models.validators.LocationNameValidator;
 import models.validators.LocationYZValidator;
 
@@ -13,14 +14,14 @@ import java.util.Scanner;
  * @since 1.0
  * @author Zerumi
  */
-public class LocationHandler implements ModuleHandler<Location> {
+public class LocationCLIHandler implements ModuleHandler<Location> {
     /**
      * Method for create fully validated objects by CLI.
      *
      * @return Built object
      */
     @Override
-    public Location buildObjectByCLI() {
+    public Location buildObject() {
         System.out.println("Generating object...");
         Location result = new Location();
         System.out.println("Welcome to master of Location object creation!");

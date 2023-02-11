@@ -5,7 +5,7 @@ import exceptions.UnknownCommandException;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
-import models.handlers.RouteHandler;
+import models.handlers.userMode.RouteCLIHandler;
 import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
@@ -16,7 +16,29 @@ import java.util.HashSet;
  * @since 1.0
  * @author Zerumi
  */
-public class UpdateIdCommand implements BaseCommand {
+public class UpdateCommand implements BaseCommand {
+
+    ModuleHandler<Route> handler;
+
+    /**
+     * Default constructor with handler from 1.0
+     */
+    public UpdateCommand()
+    {
+        handler = new RouteCLIHandler();
+    }
+
+    /**
+     * Provides choosing handler
+     *
+     * @since 1.1
+     * @param handler ModuleHandler for operating
+     */
+    public UpdateCommand(ModuleHandler<Route> handler)
+    {
+        this.handler = handler;
+    }
+
     @Override
     public String getName() {
         return "update";
@@ -39,8 +61,8 @@ public class UpdateIdCommand implements BaseCommand {
         CommandManager manager = new CommandManager();
         Long id = Long.valueOf(args[1]);
 
-        ModuleHandler<Route> objHandler = new RouteHandler();
-        Route newObj = objHandler.buildObjectByCLI();
+        ModuleHandler<Route> objHandler = new RouteCLIHandler();
+        Route newObj = objHandler.buildObject();
 
         System.out.println("Updated ID value: " + id);
         newObj.setId(id);

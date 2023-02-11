@@ -1,4 +1,5 @@
 import commandManager.CommandExecutor;
+import commandManager.CommandMode;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -15,8 +16,6 @@ import java.util.logging.Logger;
  * @author zerumi
  */
 public class Main {
-
-    private static Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
     /**
      * Environment key to XML file for store collection.
@@ -40,6 +39,6 @@ public class Main {
         System.out.println("Welcome to CLI! Now you are operating with collection of type " + handler.getCollection().getClass().getName() + ", filled with elements of type " + handler.getFirstOrNew().getClass().getName());
         System.out.println("Now you can enter the commands. Use help for reference.");
         CommandExecutor executor = new CommandExecutor();
-        executor.startExecuting(System.in);
+        executor.startExecuting(System.in, CommandMode.CLI_UserMode);
     }
 }

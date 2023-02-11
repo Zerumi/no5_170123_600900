@@ -1,7 +1,5 @@
 package models.handlers;
 
-import models.Coordinates;
-import models.Location;
 import models.Route;
 import models.comparators.RouteComparator;
 import models.validators.*;
@@ -126,16 +124,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     public void validateElements() {
         for (Iterator<Route> it = getCollection().iterator(); it.hasNext(); ) {
             Route toValid = it.next();
-            Validator<Route> validator = (route) -> new NameValidator().validate(route.getName())
-                    && new DistanceValidator().validate(Optional.of(route).map(Route::getDistance).orElse(0))
-                    && new CoordXValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getX).orElse(0d))
-                    && new CoordYValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getY).orElse(null))
-                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getY).orElse(0L))
-                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getZ).orElse(0L))
-                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getY).orElse(0L))
-                    && new LocationYZValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getZ).orElse(0L))
-                    && new LocationNameValidator().validate(Optional.of(route).map(Route::getFrom).map(Location::getName).orElse(null))
-                    && new LocationNameValidator().validate(Optional.of(route).map(Route::getTo).map(Location::getName).orElse(null));
+            Validator<Route> validator = new RouteValidator();
 
             if (!validator.validate(toValid))
             {

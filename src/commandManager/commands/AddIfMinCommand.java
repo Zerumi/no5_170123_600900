@@ -3,8 +3,8 @@ package commandManager.commands;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
-import models.handlers.RouteHandler;
 import models.handlers.RoutesHandler;
+import models.handlers.userMode.RouteCLIHandler;
 
 import java.util.HashSet;
 
@@ -15,6 +15,26 @@ import java.util.HashSet;
  * @author Zerumi
  */
 public class AddIfMinCommand implements BaseCommand {
+
+    /**
+     * Default constructor with handler from 1.0
+     */
+    public AddIfMinCommand()
+    {
+        handler = new RouteCLIHandler();
+    }
+    ModuleHandler<Route> handler;
+    /**
+     * Provides choosing handler
+     *
+     * @since 1.1
+     * @param handler ModuleHandler for operating
+     */
+    public AddIfMinCommand(ModuleHandler<Route> handler)
+    {
+        this.handler = handler;
+    }
+
     @Override
     public String getName() {
         return "add_if_min";
@@ -31,10 +51,9 @@ public class AddIfMinCommand implements BaseCommand {
     }
     @Override
     public void execute(String[] args) {
-        ModuleHandler<Route> handler = new RouteHandler();
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Route obj = handler.buildObjectByCLI();
+        Route obj = handler.buildObject();
 
         if (obj.compareTo(collectionHandler.getFirstOrNew()) < 0)
         {

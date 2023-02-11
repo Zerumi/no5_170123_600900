@@ -65,7 +65,7 @@ public class XMLWriter implements BaseWriter {
         }
         writer.println(value);
         for (lastKnownI = address.length; lastKnownI > 0; lastKnownI--) {
-            myLogger.info("Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address) + " / lastI: " + lastKnownI);
+            myLogger.fine("Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address) + " / lastI: " + lastKnownI);
             if (nextAddress.length < lastKnownI || !Objects.equals(nextAddress[lastKnownI - 1], address[lastKnownI - 1])) {
                 for (int j = 0; j < lastKnownI; j++) {
                     writer.print("\t");

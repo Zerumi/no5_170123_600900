@@ -1,17 +1,15 @@
-package models.handlers;
+package models.handlers.userMode;
 
 import models.Route;
+import models.handlers.*;
 import models.validators.DistanceValidator;
-import models.validators.IdValidator;
 import models.validators.NameValidator;
 import models.validators.Validator;
 
 import java.time.Instant;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Current implementation of ModuleHandler for Route Model.
@@ -19,15 +17,14 @@ import java.util.concurrent.ThreadLocalRandom;
  * @since 1.0
  * @author Zerumi
  */
-public class RouteHandler implements ModuleHandler<Route>{
+public class RouteCLIHandler implements ModuleHandler<Route> {
     /**
-     * Method for create fully validated objects by CLI.
+     * Method for create fully validated objects by CLI (userMode).
      *
      * @return Built object
      */
     @Override
-    public Route buildObjectByCLI() {
-        CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
+    public Route buildObject() {
         System.out.println("Generating object...");
         Route result = new Route();
         System.out.println("Welcome to master of Route object creation!");
@@ -37,19 +34,7 @@ public class RouteHandler implements ModuleHandler<Route>{
         Scanner scanner = new Scanner(System.in);
 
         // id
-        Validator<Long> idValidator = new IdValidator();
-        var lastObj = handler.getLastElement();
-        long lastId = 1L;
-        if (lastObj != null)
-        {
-            lastId = lastObj.getId() + 1;
-        }
-        while (!idValidator.validate(lastId))
-        {
-            lastId = ThreadLocalRandom.current().nextLong(1, Long.MAX_VALUE);
-        }
-        result.setId(lastId);
-        System.out.println("ID Field (auto-generated): " + lastId);
+        result.setId(RouteHandlers.generateID());
 
         // name
         Validator<String> nameValidator = new NameValidator();
@@ -69,8 +54,8 @@ public class RouteHandler implements ModuleHandler<Route>{
 
         // coords
         System.out.println("Starting coordinates field setup... (Type: Coordinates)");
-        CoordinatesHandler coordinatesHandler = new CoordinatesHandler();
-        result.setCoordinates(coordinatesHandler.buildObjectByCLI());
+        CoordinatesCLIHandler coordinatesCLIHandler = new CoordinatesCLIHandler();
+        result.setCoordinates(coordinatesCLIHandler.buildObject());
 
         // from (may null)
         System.out.println("Starting \"from\" field setup... (Type: Location)");
@@ -78,8 +63,8 @@ public class RouteHandler implements ModuleHandler<Route>{
         String answer = scanner.next();
         if (!answer.equalsIgnoreCase("y"))
         {
-            LocationHandler locationHandler = new LocationHandler();
-            result.setFrom(locationHandler.buildObjectByCLI());
+            LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
+            result.setFrom(locationCLIHandler.buildObject());
         }
         if (scanner.hasNextLine())
         {
@@ -92,8 +77,8 @@ public class RouteHandler implements ModuleHandler<Route>{
         answer = scanner.next();
         if (!answer.equalsIgnoreCase("y"))
         {
-            LocationHandler locationHandler = new LocationHandler();
-            result.setTo(locationHandler.buildObjectByCLI());
+            LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
+            result.setTo(locationCLIHandler.buildObject());
         }
         if (scanner.hasNextLine())
         {

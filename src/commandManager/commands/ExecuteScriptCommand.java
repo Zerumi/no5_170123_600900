@@ -1,6 +1,7 @@
 package commandManager.commands;
 
 import commandManager.CommandExecutor;
+import commandManager.CommandMode;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -36,7 +37,7 @@ public class ExecuteScriptCommand implements BaseCommand {
         try {
             CommandExecutor executor = new CommandExecutor();
             myLogger.log(Level.INFO, "Выполняем скрипт " + args[1]);
-            executor.startExecuting(new FileInputStream(Path.of(args[1]).toFile()));
+            executor.startExecuting(new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException(e);
         }

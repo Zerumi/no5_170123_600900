@@ -7,4 +7,6 @@ fileLogic.editors
 models
 models.comparators
 models.handlers
+models.handlers.nonUserMode
+models.handlers.userMode
 models.validators

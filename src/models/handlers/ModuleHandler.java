@@ -12,5 +12,5 @@ public interface ModuleHandler<T> {
      *
      * @return Created object.
      */
-    T buildObjectByCLI();
+    T buildObject();
 }

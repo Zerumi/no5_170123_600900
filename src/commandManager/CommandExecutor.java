@@ -15,12 +15,12 @@ public class CommandExecutor {
      * Start executing commands from InputStream.
      *
      * @param input commands stream (File, System.in, e.t.c.)
+     * @param mode variant of command behavior (see CommandMode enum)
      */
-    public void startExecuting(InputStream input)
+    public void startExecuting(InputStream input, CommandMode mode)
     {
-        CommandManager commandManager = new CommandManager();
-
         Scanner cmdScanner = new Scanner(input);
+        CommandManager commandManager = new CommandManager(mode, cmdScanner);
         while (cmdScanner.hasNext())
         {
             String line = cmdScanner.nextLine();
@@ -29,7 +29,7 @@ public class CommandExecutor {
                 commandManager.executeCommand(line.split(" "));
             } catch (Exception e) {
                 myLogger.log(Level.SEVERE, "В командном менеджере произошла ошибка! " + e);
-                if (input.equals(System.in))
+                if (mode.equals(CommandMode.CLI_UserMode))
                     myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу.");
                 else
                     myLogger.log(Level.INFO, "Команда была пропущена... Обработчик продолжает работу");

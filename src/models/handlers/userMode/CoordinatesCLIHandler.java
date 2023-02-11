@@ -1,6 +1,7 @@
-package models.handlers;
+package models.handlers.userMode;
 
 import models.Coordinates;
+import models.handlers.ModuleHandler;
 import models.validators.CoordXValidator;
 import models.validators.CoordYValidator;
 
@@ -13,7 +14,7 @@ import java.util.Scanner;
  * @since 1.0
  * @author Zerumi
  */
-public class CoordinatesHandler implements ModuleHandler<Coordinates> {
+public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
 
     /**
      * Method for create fully validated objects by CLI.
@@ -21,7 +22,7 @@ public class CoordinatesHandler implements ModuleHandler<Coordinates> {
      * @return Built object
      */
     @Override
-    public Coordinates buildObjectByCLI() {
+    public Coordinates buildObject() {
         System.out.println("Generating object...");
         Coordinates result = new Coordinates();
         System.out.println("Welcome to master of Coordinates object creation!");

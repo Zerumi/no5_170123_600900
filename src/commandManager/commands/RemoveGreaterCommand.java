@@ -4,8 +4,8 @@ import models.Route;
 import models.comparators.RouteHashComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
-import models.handlers.RouteHandler;
 import models.handlers.RoutesHandler;
+import models.handlers.userMode.RouteCLIHandler;
 
 import java.util.HashSet;
 
@@ -16,6 +16,27 @@ import java.util.HashSet;
  * @author Zerumi
  */
 public class RemoveGreaterCommand implements BaseCommand {
+
+    ModuleHandler<Route> handler;
+
+    /**
+     * Default constructor with handler from 1.0
+     */
+    public RemoveGreaterCommand()
+    {
+        handler = new RouteCLIHandler();
+    }
+
+    /**
+     * Provides choosing handler
+     *
+     * @since 1.1
+     * @param handler ModuleHandler for operating
+     */
+    public RemoveGreaterCommand(ModuleHandler<Route> handler)
+    {
+        this.handler = handler;
+    }
     @Override
     public String getName() {
         return "remove_greater";
@@ -34,10 +55,9 @@ public class RemoveGreaterCommand implements BaseCommand {
     public void execute(String[] args) {
         RouteHashComparator comparator = new RouteHashComparator();
 
-        ModuleHandler<Route> handler = new RouteHandler();
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Route greaterThan = handler.buildObjectByCLI();
+        Route greaterThan = handler.buildObject();
         System.out.println("Hashcode: " + greaterThan.hashCode());
         var iterator = collectionHandler.getCollection().iterator();
 
