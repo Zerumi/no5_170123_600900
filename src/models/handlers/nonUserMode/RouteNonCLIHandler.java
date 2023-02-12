@@ -57,20 +57,20 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
 
                 if (i == coordsIndex)
                 {
-                    valuesToRead -= 2;
+                    valuesToRead -= 1;
                     fromIndex -= 1;
                     toIndex -= 1;
                 }
 
                 if (i == fromIndex)
                 {
-                    valuesToRead -= 4;
+                    valuesToRead -= 3;
                     toIndex -= 3;
                 }
 
                 if (i == toIndex)
                 {
-                    valuesToRead -= 4;
+                    valuesToRead -= 3;
                 }
             }
         }
@@ -87,8 +87,8 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
                 coordinates.setY(Float.valueOf(values.get(coordsIndex + 1)));
                 System.out.println("Coords Y: " + coordinates.getY());
                 result.setCoordinates(coordinates);
-                System.out.println("Coords: " + result.getCoordinates());
             }
+            System.out.println("Coords: " + result.getCoordinates());
             result.setFrom(generateLocation(fromIndex, values));
             System.out.println("From: " + result.getFrom());
             result.setTo(generateLocation(toIndex, values));
@@ -101,7 +101,11 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
 
             Validator<Route> validator = new RouteValidator();
             if (!validator.validate(result))
+            {
+                System.out.println("Object's invalid, skipping...");
                 throw new IllegalArgumentException("Созданный элемент нарушает ограничения и не может быть добавлен в коллекцию!");
+            }
+            System.out.println("Validate successful! Sending result...");
 
             return result;
 
