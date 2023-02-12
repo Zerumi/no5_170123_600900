@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug &amp; docs fixes, part 6">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="docs fixes, final">
+      <change afterPath="$PROJECT_DIR$/diagrams/no5_170123_600900" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no5_170123_600900.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no5_170123_600900.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no5_170123_600900.graphml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no5_170123_600900.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models.handlers" />
@@ -102,6 +102,7 @@
       <workItem from="1675730971587" duration="8839000" />
       <workItem from="1675769234920" duration="29421000" />
       <workItem from="1675840478759" duration="21322000" />
+      <workItem from="1676163071208" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -201,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676162242594</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="docs fixes, final">
+      <created>1676162797496</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162797496</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +231,8 @@
     <MESSAGE value="bug fixes, part 4" />
     <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
     <MESSAGE value="bug &amp; docs fixes, part 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug &amp; docs fixes, part 6" />
+    <MESSAGE value="docs fixes, final" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs fixes, final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

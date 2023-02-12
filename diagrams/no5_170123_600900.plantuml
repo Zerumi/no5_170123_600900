@@ -1,0 +1,439 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AddCommand {
+  + AddCommand(): 
+  + AddCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class AddIfMaxCommand {
+  + AddIfMaxCommand(): 
+  + AddIfMaxCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class AddIfMinCommand {
+  + AddIfMinCommand(): 
+  + AddIfMinCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+interface BaseCommand << interface >> {
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+interface BaseReader << interface >> {
+  + readFromFile(String): LinkedHashMap<String[], String>
+}
+interface BaseWriter << interface >> {
+  + writeToFile(String, LinkedHashMap<String[], String>): void
+}
+class ClearCommand {
+  + ClearCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+interface CollectionHandler<T, E> << interface >> {
+  + validateElements(): void
+  + sort(): void
+  + clearCollection(): void
+  + addElementToCollection(E): void
+   lastElement: E
+   firstOrNew: E
+   collection: T
+   initDate: Date
+}
+class CommandExecutor {
+  + CommandExecutor(): 
+  + startExecuting(InputStream, CommandMode): void
+}
+class CommandManager {
+  + CommandManager(): 
+  + CommandManager(CommandMode, Scanner): 
+  ~ commands: LinkedHashMap<String, BaseCommand>
+  + executeCommand(String[]): void
+   commands: LinkedHashMap<String, BaseCommand>
+}
+enum CommandMode << enumeration >> {
+  + CommandMode(): 
+  + valueOf(String): CommandMode
+  + values(): CommandMode[]
+}
+class CoordXValidator {
+  + CoordXValidator(): 
+  + validate(Double): boolean
+}
+class CoordYValidator {
+  + CoordYValidator(): 
+  + validate(Float): boolean
+}
+class Coordinates {
+  + Coordinates(): 
+  - x: double
+  - y: Float
+  + equals(Object): boolean
+  + toString(): String
+  + hashCode(): int
+   x: double
+   y: Float
+}
+class CoordinatesCLIHandler {
+  + CoordinatesCLIHandler(): 
+  + buildObject(): Coordinates
+}
+class CountGreaterThanDistanceCommand {
+  + CountGreaterThanDistanceCommand(): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class DateEditor {
+  + DateEditor(): 
+  + removePropertyChangeListener(PropertyChangeListener): void
+  + addPropertyChangeListener(PropertyChangeListener): void
+  + supportsCustomEditor(): boolean
+  + paintValue(Graphics, Rectangle): void
+   asText: String
+   customEditor: Component
+   paintable: boolean
+   javaInitializationString: String
+   value: Object
+   tags: String[]
+}
+class DistanceValidator {
+  + DistanceValidator(): 
+  + validate(Integer): boolean
+}
+class ExecuteScriptCommand {
+  + ExecuteScriptCommand(): 
+  - checkRecursion(String, ArrayList<Path>): boolean
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class ExitCommand {
+  + ExitCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class HelpCommand {
+  + HelpCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class IdValidator {
+  + IdValidator(): 
+  + validate(Long): boolean
+}
+class InfoCommand {
+  + InfoCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class Loader<T, E> {
+  + Loader(Class<T>, Class<E>): 
+  - convert(Class<?>, String): Object
+  + loadFromXMLbyEnvKey(String): T
+  + loadFromFile(String, BaseReader): T
+  - addFieldToElement(String[], String): void
+  - setField(Class<?>, String[], int, String, U): void
+  - setupConverter(): void
+  - fillCollection(LinkedHashMap<String[], String>): void
+  + setupConverter(Class<?>, Class<PropertyEditor>): void
+  - addObjectToCollection(E): void
+  - buildElement(): E
+}
+class Location {
+  + Location(): 
+  - z: Long
+  - y: Long
+  - name: String
+  - x: float
+  + toString(): String
+  + equals(Object): boolean
+  + hashCode(): int
+   name: String
+   x: float
+   z: Long
+   y: Long
+}
+class LocationCLIHandler {
+  + LocationCLIHandler(): 
+  + buildObject(): Location
+}
+class LocationNameValidator {
+  + LocationNameValidator(): 
+  + validate(String): boolean
+}
+class LocationYZValidator {
+  + LocationYZValidator(): 
+  + validate(Long): boolean
+}
+class Main {
+  + Main(): 
+  + main(String[]): void
+}
+class MinByCreationDateCommand {
+  + MinByCreationDateCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+interface ModuleHandler<T> << interface >> {
+  + buildObject(): T
+}
+class NameValidator {
+  + NameValidator(): 
+  + validate(String): boolean
+}
+class PrintFieldDistanceAscendingCommand {
+  + PrintFieldDistanceAscendingCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class RemoveByIdCommand {
+  + RemoveByIdCommand(): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class RemoveGreaterCommand {
+  + RemoveGreaterCommand(): 
+  + RemoveGreaterCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+class Route {
+  + Route(): 
+  - to: Location
+  - coordinates: Coordinates
+  - creationDate: Date
+  - from: Location
+  - id: Long
+  - name: String
+  - distance: int
+  + equals(Object): boolean
+  + compareTo(Route): int
+  + hashCode(): int
+  + toString(): String
+   name: String
+   coordinates: Coordinates
+   to: Location
+   distance: int
+   id: Long
+   from: Location
+   creationDate: Date
+}
+class RouteCLIHandler {
+  + RouteCLIHandler(): 
+  + buildObject(): Route
+}
+class RouteComparator {
+  + RouteComparator(): 
+  + compare(Route, Route): int
+}
+class RouteHandlers {
+  + RouteHandlers(): 
+  + generateID(): Long
+}
+class RouteHashComparator {
+  + RouteHashComparator(): 
+  + compare(Route, Route): int
+}
+class RouteNonCLIHandler {
+  + RouteNonCLIHandler(Scanner): 
+  + buildObject(): Route
+  - generateLocation(int, ArrayList<String>): Location
+}
+class RouteValidator {
+  + RouteValidator(): 
+  + validate(Route): boolean
+}
+class RoutesHandler {
+  - RoutesHandler(): 
+  - initDate: Date
+  + validateElements(): void
+  + addElementToCollection(Route): void
+  + clearCollection(): void
+  + sort(): void
+   firstOrNew: Route
+   instance: RoutesHandler
+   collection: HashSet<Route>
+   initDate: Date
+   lastElement: Route
+}
+class SaveCommand {
+  + SaveCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class Saver<T, E> {
+  + Saver(Class<E>): 
+  + saveCollection(T, String): void
+  - convert(Class<?>, Object): String
+  - addToCollection(Object, Field, ArrayList<String>): void
+  - getValues(T): LinkedHashMap<String[], String>
+}
+class ShowCommand {
+  + ShowCommand(): 
+  + execute(String[]): void
+   name: String
+   descr: String
+}
+class UnknownCommandException {
+  + UnknownCommandException(String): 
+}
+class UpdateCommand {
+  + UpdateCommand(): 
+  + UpdateCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+}
+interface Validator<T> << interface >> {
+  + validate(T): boolean
+}
+class Wrapper {
+  + Wrapper(): 
+  - WRAPPER_TYPES: Set<Class<?>>
+  + isWrapperType(Class<?>): boolean
+   WRAPPER_TYPES: Set<Class<?>>
+}
+class XMLReader {
+  + XMLReader(): 
+  + readFromFile(String): LinkedHashMap<String[], String>
+  - handleCurrentKeyAndValue(): void
+  - pushValue(String[]): void
+}
+class XMLWriter {
+  + XMLWriter(): 
+  - writeElement(PrintWriter, String[], String[], String): void
+  - getNextAddress(LinkedHashMap<String[], String>, String[]): String[]
+  + writeToFile(String, LinkedHashMap<String[], String>): void
+}
+
+AddCommand                          -[#008200,dashed]-^  BaseCommand                        
+AddCommand                         "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                      
+AddCommand                          -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+AddIfMaxCommand                     -[#008200,dashed]-^  BaseCommand                        
+AddIfMaxCommand                    "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                      
+AddIfMaxCommand                     -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+AddIfMinCommand                     -[#008200,dashed]-^  BaseCommand                        
+AddIfMinCommand                    "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                      
+AddIfMinCommand                     -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+ClearCommand                        -[#008200,dashed]-^  BaseCommand                        
+CommandExecutor                     -[#595959,dashed]->  CommandManager                     : "«create»"
+CommandManager                      -[#595959,dashed]->  AddCommand                         : "«create»"
+CommandManager                      -[#595959,dashed]->  AddIfMaxCommand                    : "«create»"
+CommandManager                      -[#595959,dashed]->  AddIfMinCommand                    : "«create»"
+CommandManager                     "1" *-[#595959,plain]-> "commands\n*" BaseCommand                        
+CommandManager                      -[#595959,dashed]->  ClearCommand                       : "«create»"
+CommandManager                      -[#595959,dashed]->  CountGreaterThanDistanceCommand    : "«create»"
+CommandManager                      -[#595959,dashed]->  ExecuteScriptCommand               : "«create»"
+CommandManager                      -[#595959,dashed]->  ExitCommand                        : "«create»"
+CommandManager                      -[#595959,dashed]->  HelpCommand                        : "«create»"
+CommandManager                      -[#595959,dashed]->  InfoCommand                        : "«create»"
+CommandManager                      -[#595959,dashed]->  MinByCreationDateCommand           : "«create»"
+CommandManager                      -[#595959,dashed]->  PrintFieldDistanceAscendingCommand : "«create»"
+CommandManager                      -[#595959,dashed]->  RemoveByIdCommand                  : "«create»"
+CommandManager                      -[#595959,dashed]->  RemoveGreaterCommand               : "«create»"
+CommandManager                      -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+CommandManager                      -[#595959,dashed]->  RouteNonCLIHandler                 : "«create»"
+CommandManager                      -[#595959,dashed]->  SaveCommand                        : "«create»"
+CommandManager                      -[#595959,dashed]->  ShowCommand                        : "«create»"
+CommandManager                      -[#595959,dashed]->  UnknownCommandException            : "«create»"
+CommandManager                      -[#595959,dashed]->  UpdateCommand                      : "«create»"
+CoordXValidator                     -[#008200,dashed]-^  Validator                          
+CoordYValidator                     -[#008200,dashed]-^  Validator                          
+CoordinatesCLIHandler               -[#595959,dashed]->  CoordXValidator                    : "«create»"
+CoordinatesCLIHandler               -[#595959,dashed]->  CoordYValidator                    : "«create»"
+CoordinatesCLIHandler               -[#595959,dashed]->  Coordinates                        : "«create»"
+CoordinatesCLIHandler               -[#008200,dashed]-^  ModuleHandler                      
+CountGreaterThanDistanceCommand     -[#008200,dashed]-^  BaseCommand                        
+DistanceValidator                   -[#008200,dashed]-^  Validator                          
+ExecuteScriptCommand                -[#008200,dashed]-^  BaseCommand                        
+ExecuteScriptCommand                -[#595959,dashed]->  CommandExecutor                    : "«create»"
+ExitCommand                         -[#008200,dashed]-^  BaseCommand                        
+HelpCommand                         -[#008200,dashed]-^  BaseCommand                        
+HelpCommand                         -[#595959,dashed]->  CommandManager                     : "«create»"
+IdValidator                         -[#008200,dashed]-^  Validator                          
+InfoCommand                         -[#008200,dashed]-^  BaseCommand                        
+Loader                              -[#595959,dashed]->  XMLReader                          : "«create»"
+LocationCLIHandler                  -[#595959,dashed]->  Location                           : "«create»"
+LocationCLIHandler                  -[#595959,dashed]->  LocationNameValidator              : "«create»"
+LocationCLIHandler                  -[#595959,dashed]->  LocationYZValidator                : "«create»"
+LocationCLIHandler                  -[#008200,dashed]-^  ModuleHandler                      
+LocationNameValidator               -[#008200,dashed]-^  Validator                          
+LocationYZValidator                 -[#008200,dashed]-^  Validator                          
+Main                                -[#595959,dashed]->  CommandExecutor                    : "«create»"
+Main                                -[#595959,dashed]->  Loader                             : "«create»"
+MinByCreationDateCommand            -[#008200,dashed]-^  BaseCommand                        
+NameValidator                       -[#008200,dashed]-^  Validator                          
+PrintFieldDistanceAscendingCommand  -[#008200,dashed]-^  BaseCommand                        
+RemoveByIdCommand                   -[#008200,dashed]-^  BaseCommand                        
+RemoveGreaterCommand                -[#008200,dashed]-^  BaseCommand                        
+RemoveGreaterCommand               "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                      
+RemoveGreaterCommand                -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+RemoveGreaterCommand                -[#595959,dashed]->  RouteHashComparator                : "«create»"
+Route                              "1" *-[#595959,plain]-> "coordinates\n1" Coordinates                        
+Route                              "1" *-[#595959,plain]-> "from\n1" Location                           
+RouteCLIHandler                     -[#595959,dashed]->  CoordinatesCLIHandler              : "«create»"
+RouteCLIHandler                     -[#595959,dashed]->  DistanceValidator                  : "«create»"
+RouteCLIHandler                     -[#595959,dashed]->  LocationCLIHandler                 : "«create»"
+RouteCLIHandler                     -[#008200,dashed]-^  ModuleHandler                      
+RouteCLIHandler                     -[#595959,dashed]->  NameValidator                      : "«create»"
+RouteCLIHandler                     -[#595959,dashed]->  Route                              : "«create»"
+RouteHandlers                       -[#595959,dashed]->  IdValidator                        : "«create»"
+RouteNonCLIHandler                  -[#595959,dashed]->  Coordinates                        : "«create»"
+RouteNonCLIHandler                  -[#595959,dashed]->  Location                           : "«create»"
+RouteNonCLIHandler                  -[#008200,dashed]-^  ModuleHandler                      
+RouteNonCLIHandler                  -[#595959,dashed]->  Route                              : "«create»"
+RouteNonCLIHandler                  -[#595959,dashed]->  RouteValidator                     : "«create»"
+RouteValidator                      -[#595959,dashed]->  CoordXValidator                    : "«create»"
+RouteValidator                      -[#595959,dashed]->  CoordYValidator                    : "«create»"
+RouteValidator                      -[#595959,dashed]->  DistanceValidator                  : "«create»"
+RouteValidator                      -[#595959,dashed]->  LocationNameValidator              : "«create»"
+RouteValidator                      -[#595959,dashed]->  LocationYZValidator                : "«create»"
+RouteValidator                      -[#595959,dashed]->  NameValidator                      : "«create»"
+RouteValidator                      -[#008200,dashed]-^  Validator                          
+RoutesHandler                       -[#008200,dashed]-^  CollectionHandler                  
+RoutesHandler                       -[#595959,dashed]->  Route                              : "«create»"
+RoutesHandler                      "1" *-[#595959,plain]-> "routes\n*" Route                              
+RoutesHandler                       -[#595959,dashed]->  RouteComparator                    : "«create»"
+RoutesHandler                       -[#595959,dashed]->  RouteValidator                     : "«create»"
+SaveCommand                         -[#008200,dashed]-^  BaseCommand                        
+SaveCommand                         -[#595959,dashed]->  Saver                              : "«create»"
+Saver                               -[#595959,dashed]->  XMLWriter                          : "«create»"
+ShowCommand                         -[#008200,dashed]-^  BaseCommand                        
+UpdateCommand                       -[#008200,dashed]-^  BaseCommand                        
+UpdateCommand                       -[#595959,dashed]->  CommandManager                     : "«create»"
+UpdateCommand                      "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                      
+UpdateCommand                       -[#595959,dashed]->  RouteCLIHandler                    : "«create»"
+Wrapper                             +-[#820000,plain]-  Saver                              
+XMLReader                           -[#008200,dashed]-^  BaseReader                         
+XMLWriter                           -[#008200,dashed]-^  BaseWriter                         
+@enduml

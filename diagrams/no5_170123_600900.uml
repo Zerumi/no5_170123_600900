@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/zerumi/IdeaProjects/no5_170123_600900/src</OriginalElement>
+  <nodes>
+    <node x="1061.1673101673089" y="224.0">models.validators.LocationYZValidator</node>
+    <node x="6491.875" y="1674.5">commandManager.commands.SaveCommand</node>
+    <node x="224.04231016730864" y="224.0">models.validators.CoordYValidator</node>
+    <node x="6285.875" y="1674.5">commandManager.commands.ExitCommand</node>
+    <node x="1935.0" y="237.5">models.handlers.ModuleHandler</node>
+    <node x="5546.695463320463" y="224.0">models.validators.IdValidator</node>
+    <node x="129.625" y="1287.0">models.validators.RouteValidator</node>
+    <node x="6652.561776061776" y="734.0">fileLogic.XMLWriter</node>
+    <node x="104.81177606177607" y="1688.0">models.handlers.nonUserMode.RouteNonCLIHandler</node>
+    <node x="2760.625" y="1650.5">commandManager.commands.AddCommand</node>
+    <node x="3398.6673101673086" y="237.5">fileLogic.BaseReader</node>
+    <node x="785.3468468468454" y="1287.0">models.comparators.RouteComparator</node>
+    <node x="479.8117760617761" y="1589.0">models.handlers.RoutesHandler</node>
+    <node x="6797.16731016731" y="1673.0">fileLogic.Saver.Wrapper</node>
+    <node x="6695.561776061776" y="1251.0">fileLogic.Saver</node>
+    <node x="2412.625" y="1650.5">commandManager.commands.AddIfMinCommand</node>
+    <node x="4819.875" y="1674.5">commandManager.commands.InfoCommand</node>
+    <node x="5521.695463320463" y="1263.0">commandManager.commands.BaseCommand</node>
+    <node x="436.04231016730864" y="101.0">models.Location</node>
+    <node x="2300.8468468468454" y="1287.0">models.comparators.RouteHashComparator</node>
+    <node x="6683.561776061776" y="237.5">fileLogic.BaseWriter</node>
+    <node x="883.1249999999998" y="-14.0">models.validators.Validator</node>
+    <node x="5559.695463320463" y="758.0">models.handlers.RouteHandlers</node>
+    <node x="4087.875" y="1662.5">commandManager.commands.CountGreaterThanDistanceCommand</node>
+    <node x="3398.6673101673086" y="734.0">fileLogic.XMLReader</node>
+    <node x="-175.0" y="2361.0">fileLogic.editors.DateEditor</node>
+    <node x="-42.93822393822393" y="149.0">models.Coordinates</node>
+    <node x="3527.875" y="1700.0">Main</node>
+    <node x="1722.6249999999998" y="1650.5">commandManager.commands.UpdateCommand</node>
+    <node x="306.0" y="2361.0">commandManager.CommandMode</node>
+    <node x="5984.875" y="1713.5">exceptions.UnknownCommandException</node>
+    <node x="1529.0968468468454" y="758.0">models.handlers.userMode.LocationCLIHandler</node>
+    <node x="5531.875" y="1662.5">commandManager.commands.RemoveByIdCommand</node>
+    <node x="4448.875" y="1674.5">commandManager.commands.PrintFieldDistanceAscendingCommand</node>
+    <node x="1017.3468468468454" y="1215.0">models.handlers.CollectionHandler</node>
+    <node x="5294.695463320463" y="224.0">models.validators.LocationNameValidator</node>
+    <node x="1050.4173101673089" y="758.0">models.handlers.userMode.CoordinatesCLIHandler</node>
+    <node x="2060.625" y="1650.5">commandManager.commands.AddIfMaxCommand</node>
+    <node x="5778.875" y="1674.5">commandManager.commands.ClearCommand</node>
+    <node x="3396.6673101673086" y="1179.0">fileLogic.Loader</node>
+    <node x="1606.3468468468454" y="1287.0">models.handlers.userMode.RouteCLIHandler</node>
+    <node x="828.9173101673089" y="758.0">models.validators.NameValidator</node>
+    <node x="3713.875" y="1650.5">commandManager.commands.ExecuteScriptCommand</node>
+    <node x="5231.875" y="1674.5">commandManager.commands.MinByCreationDateCommand</node>
+    <node x="3138.875" y="1650.5">commandManager.commands.RemoveGreaterCommand</node>
+    <node x="1302.4173101673089" y="758.0">models.validators.DistanceValidator</node>
+    <node x="239.47184684684544" y="551.0">models.Route</node>
+    <node x="5025.875" y="1674.5">commandManager.commands.ShowCommand</node>
+    <node x="5408.292310167309" y="2175.0">commandManager.commands.HelpCommand</node>
+    <node x="650.0423101673086" y="224.0">models.validators.CoordXValidator</node>
+    <node x="2933.3468468468454" y="1287.0">commandManager.CommandExecutor</node>
+    <node x="4146.417310167309" y="1955.0">commandManager.CommandManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="commandManager.commands.HelpCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="46.5" y="-70.5" />
+      <point x="5547.792310167309" y="2149.0" />
+      <point x="6770.061776061776" y="2149.0" />
+      <point x="6770.061776061776" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.handlers.userMode.CoordinatesCLIHandler" target="models.Coordinates" relationship="CREATE">
+      <point x="-16.250310167308953" y="-45.0" />
+      <point x="1150.167" y="469.0" />
+      <point x="15.0" y="469.0" />
+      <point x="15.0" y="429.5" />
+      <point x="54.062" y="429.5" />
+      <point x="2.2393822392530183E-4" y="120.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="models.handlers.ModuleHandler" relationship="TO_ONE">
+      <point x="-0.0" y="-94.5" />
+      <point x="3323.375" y="1593.0" />
+      <point x="2035.5" y="1593.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.MinByCreationDateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="5371.875" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.handlers.RouteHandlers" target="models.validators.IdValidator" relationship="CREATE">
+      <point x="-0.0" y="-45.0" />
+      <point x="-0.0" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.ExitCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="6378.875" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="110.66666666666652" y="-94.5" />
+      <point x="2337.291666666666" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="fileLogic.Saver" relationship="CREATE">
+      <point x="-0.0" y="-70.5" />
+      <point x="6584.875" y="1332.0" />
+      <point x="-192.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ExecuteScriptCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="88.5" y="-94.5" />
+      <point x="3979.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="109.33333333333348" y="-94.5" />
+      <point x="2685.958333333333" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="Main" target="commandManager.CommandExecutor" relationship="CREATE">
+      <point x="-0.0" y="-45.0" />
+      <point x="3610.875" y="1621.0" />
+      <point x="3097.847" y="1621.0" />
+      <point x="-14.99984684684523" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.SaveCommand" relationship="CREATE">
+      <point x="186.5" y="45.0" />
+      <point x="6584.875" y="2084.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.validators.RouteValidator" relationship="CREATE">
+      <point x="-137.99977606177606" y="-79.5" />
+      <point x="425.0" y="1665.5" />
+      <point x="425.0" y="1332.0" />
+      <point x="98.5" y="-0.0" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.handlers.userMode.LocationCLIHandler" relationship="CREATE">
+      <point x="15.000153153154542" y="-45.0" />
+      <point x="81.75015315315454" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.InfoCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="4912.875" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.CoordYValidator" relationship="CREATE">
+      <point x="30.0" y="-45.0" />
+      <point x="258.125" y="1077.5" />
+      <point x="218.0" y="1077.5" />
+      <point x="218.0" y="429.5" />
+      <point x="320.042" y="429.5" />
+      <point x="-3.101673086689516E-4" y="45.0" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.handlers.CollectionHandler" relationship="REALIZATION">
+      <point x="92.0" y="-156.0" />
+      <point x="709.8117760617761" y="1547.0" />
+      <point x="1141.3468468468454" y="1547.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+    <edge source="commandManager.commands.ShowCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="5118.875" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.CountGreaterThanDistanceCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-82.5" />
+      <point x="4258.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.validators.IdValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="5642.695463320463" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.nonUserMode.RouteNonCLIHandler" target="models.Coordinates" relationship="CREATE">
+      <point x="-177.49977606177606" y="-0.0" />
+      <point x="15.0" y="1745.0" />
+      <point x="15.0" y="429.5" />
+      <point x="54.062" y="429.5" />
+      <point x="2.2393822392530183E-4" y="120.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.CoordXValidator" relationship="CREATE">
+      <point x="-84.56299999999999" y="-45.0" />
+      <point x="143.562" y="519.0" />
+      <point x="503.042" y="519.0" />
+      <point x="503.042" y="955.0" />
+      <point x="752.542" y="955.0" />
+      <point x="-3.1016730861210817E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="exceptions.UnknownCommandException" relationship="CREATE">
+      <point x="186.5" y="-15.0" />
+      <point x="6125.375" y="2024.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.validators.DistanceValidator" relationship="CREATE">
+      <point x="1.5315315454245138E-4" y="-45.0" />
+      <point x="1697.847" y="1181.0" />
+      <point x="1404.917" y="1181.0" />
+      <point x="-3.101673089531687E-4" y="45.0" />
+    </edge>
+    <edge source="models.validators.LocationNameValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="5410.695463320463" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.BaseCommand" relationship="TO_MANY">
+      <point x="186.5" y="60.0" />
+      <point x="7140.061776061776" y="2099.0" />
+      <point x="7140.061776061776" y="1047.5" />
+      <point x="5614.695463320463" y="1047.5" />
+      <point x="-0.0" y="-69.0" />
+    </edge>
+    <edge source="models.handlers.nonUserMode.RouteNonCLIHandler" target="models.handlers.ModuleHandler" relationship="REALIZATION">
+      <point x="88.75" y="-57.0" />
+      <point x="371.0617760617761" y="1557.0" />
+      <point x="1517.9173101673089" y="1557.0" />
+      <point x="1517.9173101673089" y="519.0" />
+      <point x="1624.1249999999998" y="519.0" />
+      <point x="1624.1249999999998" y="499.0" />
+      <point x="1985.25" y="499.0" />
+      <point x="-50.25" y="31.5" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="-49.25" y="-45.0" />
+      <point x="178.875" y="1147.0" />
+      <point x="-175.0" y="1147.0" />
+      <point x="-175.0" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="models.comparators.RouteHashComparator" relationship="CREATE">
+      <point x="15.0" y="-94.5" />
+      <point x="3338.375" y="1269.5" />
+      <point x="2414.8468468468454" y="1269.5" />
+      <point x="-0.0" y="-45.0" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.validators.NameValidator" relationship="CREATE">
+      <point x="-14.999846846845458" y="-45.0" />
+      <point x="1682.847" y="1198.0" />
+      <point x="927.917" y="1198.0" />
+      <point x="-3.1016730883948185E-4" y="45.0" />
+    </edge>
+    <edge source="models.handlers.nonUserMode.RouteNonCLIHandler" target="models.Location" relationship="CREATE">
+      <point x="103.75022393822394" y="-57.0" />
+      <point x="386.062" y="1588.0" />
+      <point x="459.0" y="1588.0" />
+      <point x="459.0" y="1062.5" />
+      <point x="533.042" y="1062.5" />
+      <point x="-3.1016730861210817E-4" y="168.0" />
+    </edge>
+    <edge source="fileLogic.Loader" target="fileLogic.XMLReader" relationship="CREATE">
+      <point x="-0.0" y="-153.0" />
+      <point x="-0.0" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="-0.0" y="94.5" />
+      <point x="2909.625" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="99.33333333333326" y="-94.5" />
+      <point x="3008.958333333333" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="fileLogic.XMLWriter" target="fileLogic.BaseWriter" relationship="REALIZATION">
+      <point x="0.0" y="-69.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.RemoveByIdCommand" relationship="CREATE">
+      <point x="186.5" y="-45.0" />
+      <point x="5645.375" y="1994.0" />
+      <point x="-0.0" y="82.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.PrintFieldDistanceAscendingCommand" relationship="CREATE">
+      <point x="179.0" y="-84.0" />
+      <point x="-112.45768983269136" y="70.5" />
+    </edge>
+    <edge source="models.handlers.nonUserMode.RouteNonCLIHandler" target="models.Route" relationship="CREATE">
+      <point x="2.2393822393951268E-4" y="-57.0" />
+      <point x="282.312" y="1573.0" />
+      <point x="344.125" y="1573.0" />
+      <point x="4.6531531531545625" y="252.0" />
+    </edge>
+    <edge source="Main" target="fileLogic.Loader" relationship="CREATE">
+      <point x="-18.707689832691358" y="-45.0" />
+      <point x="-0.0" y="153.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.LocationYZValidator" relationship="CREATE">
+      <point x="-30.0" y="-45.0" />
+      <point x="198.125" y="484.0" />
+      <point x="518.042" y="484.0" />
+      <point x="518.042" y="639.0" />
+      <point x="1165.167" y="639.0" />
+      <point x="-3.101673089531687E-4" y="45.0" />
+    </edge>
+    <edge source="models.validators.NameValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="927.9173101673089" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.Route" relationship="CREATE">
+      <point x="-14.999846846845458" y="45.0" />
+      <point x="1682.847" y="1573.0" />
+      <point x="344.125" y="1573.0" />
+      <point x="4.6531531531545625" y="252.0" />
+    </edge>
+    <edge source="models.validators.CoordXValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="752.5423101673086" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.RemoveGreaterCommand" relationship="CREATE">
+      <point x="-186.5" y="15.0" />
+      <point x="3338.375" y="2054.0" />
+      <point x="15.0" y="94.5" />
+    </edge>
+    <edge source="models.handlers.nonUserMode.RouteNonCLIHandler" target="models.validators.RouteValidator" relationship="CREATE">
+      <point x="-14.99977606177606" y="-57.0" />
+      <point x="267.312" y="1464.5" />
+      <point x="425.0" y="1464.5" />
+      <point x="425.0" y="1332.0" />
+      <point x="98.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="-0.0" y="94.5" />
+      <point x="3323.375" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="models.handlers.ModuleHandler" relationship="TO_ONE">
+      <point x="-0.0" y="-94.5" />
+      <point x="2909.625" y="1593.0" />
+      <point x="2035.5" y="1593.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="models.handlers.ModuleHandler" relationship="TO_ONE">
+      <point x="-0.0" y="-94.5" />
+      <point x="2226.625" y="1593.0" />
+      <point x="2035.5" y="1593.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.HelpCommand" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="-3.1016730827104766E-4" y="-70.5" />
+      <point x="5501.292" y="2149.0" />
+      <point x="4332.917" y="2149.0" />
+      <point x="-3.1016730827104766E-4" y="84.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.HelpCommand" relationship="CREATE">
+      <point x="14.999689832691729" y="84.0" />
+      <point x="4347.917" y="2245.5" />
+      <point x="-93.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="-0.0" y="94.5" />
+      <point x="2576.625" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ExitCommand" relationship="CREATE">
+      <point x="186.5" y="-0.0" />
+      <point x="6378.875" y="2039.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="commandManager.commands.ExecuteScriptCommand" target="commandManager.CommandExecutor" relationship="CREATE">
+      <point x="-0.0" y="-94.5" />
+      <point x="3890.875" y="1621.0" />
+      <point x="3097.847" y="1621.0" />
+      <point x="-14.99984684684523" y="45.0" />
+    </edge>
+    <edge source="fileLogic.XMLReader" target="fileLogic.BaseReader" relationship="REALIZATION">
+      <point x="0.0" y="-69.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.Route" relationship="CREATE">
+      <point x="2.2393822393951268E-4" y="-156.0" />
+      <point x="617.812" y="1573.0" />
+      <point x="344.125" y="1573.0" />
+      <point x="4.6531531531545625" y="252.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="-0.0" y="94.5" />
+      <point x="2226.625" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.NameValidator" relationship="CREATE">
+      <point x="-15.0" y="-45.0" />
+      <point x="213.125" y="1198.0" />
+      <point x="927.917" y="1198.0" />
+      <point x="-3.1016730883948185E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.MinByCreationDateCommand" relationship="CREATE">
+      <point x="186.5" y="-60.0" />
+      <point x="5371.875" y="1979.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ExecuteScriptCommand" relationship="CREATE">
+      <point x="-186.5" y="-0.0" />
+      <point x="3890.875" y="2039.0" />
+      <point x="-0.0" y="94.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.InfoCommand" relationship="CREATE">
+      <point x="186.5" y="30.0" />
+      <point x="4912.875" y="2069.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="-46.5" y="-70.5" />
+      <point x="6538.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.LocationNameValidator" relationship="CREATE">
+      <point x="-0.0" y="-45.0" />
+      <point x="228.125" y="1101.0" />
+      <point x="5410.695" y="1101.0" />
+      <point x="-4.6332046349562006E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.ClearCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="5871.875" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddIfMinCommand" relationship="CREATE">
+      <point x="-186.5" y="45.0" />
+      <point x="2591.625" y="2084.0" />
+      <point x="15.0" y="94.5" />
+    </edge>
+    <edge source="models.handlers.userMode.CoordinatesCLIHandler" target="models.validators.CoordXValidator" relationship="CREATE">
+      <point x="-3.101673089531687E-4" y="45.0" />
+      <point x="1166.417" y="955.0" />
+      <point x="752.542" y="955.0" />
+      <point x="-3.1016730861210817E-4" y="45.0" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.handlers.userMode.CoordinatesCLIHandler" relationship="CREATE">
+      <point x="60.75" y="-45.0" />
+      <point x="1758.5968468468454" y="429.5" />
+      <point x="1180.167" y="429.5" />
+      <point x="13.749689832691047" y="-45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ShowCommand" relationship="CREATE">
+      <point x="186.5" y="-75.0" />
+      <point x="5118.875" y="1964.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="123.0" y="-94.5" />
+      <point x="3446.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.validators.LocationYZValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="1165.1673101673089" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="-14.999999999999773" y="94.5" />
+      <point x="1866.625" y="2149.0" />
+      <point x="4332.917" y="2149.0" />
+      <point x="-3.1016730827104766E-4" y="84.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.UpdateCommand" relationship="CREATE">
+      <point x="-186.5" y="75.0" />
+      <point x="1896.625" y="2114.0" />
+      <point x="15.000000000000227" y="94.5" />
+    </edge>
+    <edge source="models.handlers.userMode.RouteCLIHandler" target="models.handlers.ModuleHandler" relationship="REALIZATION">
+      <point x="45.75" y="-45.0" />
+      <point x="1743.5968468468454" y="519.0" />
+      <point x="1624.1249999999998" y="519.0" />
+      <point x="1624.1249999999998" y="499.0" />
+      <point x="1985.25" y="499.0" />
+      <point x="-50.25" y="31.5" />
+    </edge>
+    <edge source="models.handlers.userMode.CoordinatesCLIHandler" target="models.handlers.ModuleHandler" relationship="REALIZATION">
+      <point x="58.0" y="-45.0" />
+      <point x="1224.4173101673089" y="519.0" />
+      <point x="1624.1249999999998" y="519.0" />
+      <point x="1624.1249999999998" y="499.0" />
+      <point x="1985.25" y="499.0" />
+      <point x="-50.25" y="31.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.Route" relationship="TO_MANY">
+      <point x="-129.7697760617761" y="-156.0" />
+      <point x="488.042" y="803.0" />
+      <point x="100.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddCommand" relationship="CREATE">
+      <point x="-186.5" y="30.0" />
+      <point x="2924.625" y="2069.0" />
+      <point x="15.0" y="94.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.comparators.RouteComparator" relationship="CREATE">
+      <point x="-14.99977606177606" y="-156.0" />
+      <point x="602.812" y="1332.0" />
+      <point x="-106.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="2.2737367544323206E-13" y="94.5" />
+      <point x="1881.625" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="models.handlers.userMode.LocationCLIHandler" target="models.validators.LocationYZValidator" relationship="CREATE">
+      <point x="1.5315315454245138E-4" y="-45.0" />
+      <point x="1631.097" y="639.0" />
+      <point x="1165.167" y="639.0" />
+      <point x="-3.101673089531687E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandExecutor" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="1.5315315476982505E-4" y="45.0" />
+      <point x="3112.847" y="2149.0" />
+      <point x="4332.917" y="2149.0" />
+      <point x="-3.1016730827104766E-4" y="84.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddIfMaxCommand" relationship="CREATE">
+      <point x="-186.5" y="60.0" />
+      <point x="2241.625" y="2099.0" />
+      <point x="15.0" y="94.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="models.handlers.userMode.RouteCLIHandler" relationship="CREATE">
+      <point x="-3.1016730827104766E-4" y="-84.0" />
+      <point x="4332.917" y="1897.0" />
+      <point x="1697.847" y="1897.0" />
+      <point x="1.5315315454245138E-4" y="45.0" />
+    </edge>
+    <edge source="fileLogic.Saver.Wrapper" target="fileLogic.Saver" relationship="INNER_CLASS">
+      <point x="0.0" y="-72.0" />
+      <point x="6929.16731016731" y="1567.0" />
+      <point x="6983.561776061776" y="1567.0" />
+      <point x="96.0" y="81.0" />
+    </edge>
+    <edge source="models.handlers.userMode.CoordinatesCLIHandler" target="models.validators.CoordYValidator" relationship="CREATE">
+      <point x="14.999689832691047" y="45.0" />
+      <point x="1181.417" y="1077.5" />
+      <point x="218.0" y="1077.5" />
+      <point x="218.0" y="429.5" />
+      <point x="320.042" y="429.5" />
+      <point x="-3.101673086689516E-4" y="45.0" />
+    </edge>
+    <edge source="models.validators.DistanceValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="1404.9173101673089" y="499.0" />
+      <point x="1279.6673101673089" y="499.0" />
+      <point x="1279.6673101673089" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="models.handlers.nonUserMode.RouteNonCLIHandler" relationship="CREATE">
+      <point x="-15.000310167308271" y="84.0" />
+      <point x="4317.917" y="2492.5" />
+      <point x="282.3117760617761" y="2492.5" />
+      <point x="-0.0" y="57.0" />
+    </edge>
+    <edge source="models.Route" target="models.Location" relationship="TO_ONE">
+      <point x="15.0" y="-252.0" />
+      <point x="354.47184684684544" y="331.5" />
+      <point x="-97.0" y="62.5" />
+    </edge>
+    <edge source="models.validators.CoordYValidator" target="models.validators.Validator" relationship="REALIZATION">
+      <point x="0.0" y="-45.0" />
+      <point x="320.04231016730864" y="75.0" />
+      <point x="968.1249999999998" y="75.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveByIdCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-82.5" />
+      <point x="5645.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="models.handlers.ModuleHandler" relationship="TO_ONE">
+      <point x="2.2737367544323206E-13" y="-94.5" />
+      <point x="1881.625" y="1593.0" />
+      <point x="2035.5" y="1593.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.userMode.LocationCLIHandler" target="models.validators.LocationNameValidator" relationship="CREATE">
+      <point x="1.5315315454245138E-4" y="45.0" />
+      <point x="1631.097" y="1101.0" />
+      <point x="5410.695" y="1101.0" />
+      <point x="-4.6332046349562006E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="models.handlers.ModuleHandler" relationship="TO_ONE">
+      <point x="-0.0" y="-94.5" />
+      <point x="2576.625" y="1593.0" />
+      <point x="2035.5" y="1593.0" />
+      <point x="-0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.PrintFieldDistanceAscendingCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-70.5" />
+      <point x="4624.375" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="models.Route" target="models.Coordinates" relationship="TO_ONE">
+      <point x="-0.0" y="-252.0" />
+      <point x="339.47184684684544" y="331.5" />
+      <point x="97.0" y="62.5" />
+    </edge>
+    <edge source="models.handlers.userMode.LocationCLIHandler" target="models.Location" relationship="CREATE">
+      <point x="-14.999846846845458" y="45.0" />
+      <point x="1616.097" y="1062.5" />
+      <point x="533.042" y="1062.5" />
+      <point x="-3.1016730861210817E-4" y="168.0" />
+    </edge>
+    <edge source="models.validators.RouteValidator" target="models.validators.DistanceValidator" relationship="CREATE">
+      <point x="15.0" y="-45.0" />
+      <point x="243.125" y="1181.0" />
+      <point x="1404.917" y="1181.0" />
+      <point x="-3.101673089531687E-4" y="45.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ClearCommand" relationship="CREATE">
+      <point x="186.5" y="-30.0" />
+      <point x="5871.875" y="2009.0" />
+      <point x="-0.0" y="70.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.CountGreaterThanDistanceCommand" relationship="CREATE">
+      <point x="-74.54231016730864" y="-84.0" />
+      <point x="-0.0" y="82.5" />
+    </edge>
+    <edge source="models.handlers.userMode.LocationCLIHandler" target="models.handlers.ModuleHandler" relationship="REALIZATION">
+      <point x="51.0" y="-45.0" />
+      <point x="1682.0968468468454" y="519.0" />
+      <point x="1624.1249999999998" y="519.0" />
+      <point x="1624.1249999999998" y="499.0" />
+      <point x="1985.25" y="499.0" />
+      <point x="-50.25" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="106.0" y="-94.5" />
+      <point x="1987.625" y="1537.0" />
+      <point x="4768.625" y="1537.0" />
+      <point x="4768.625" y="1527.0" />
+      <point x="5568.195463320463" y="1527.0" />
+      <point x="-46.5" y="69.0" />
+    </edge>
+    <edge source="fileLogic.Saver" target="fileLogic.XMLWriter" relationship="CREATE">
+      <point x="-0.0" y="-81.0" />
+      <point x="-0.0" y="69.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.13446296802405028" showDependencies="true" x="3484.0" y="1338.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
