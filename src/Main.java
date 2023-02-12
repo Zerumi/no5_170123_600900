@@ -6,7 +6,6 @@ import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 
 import java.util.HashSet;
-import java.util.logging.Logger;
 
 /**
  * Program entry point class. Contains main() method.

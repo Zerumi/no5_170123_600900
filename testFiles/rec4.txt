@@ -1,0 +1,6 @@
+execute_script /users/zerumi/rec5.txt
+afdgdsbds
+gadb
+sdfb
+ae
+execute_script /users/zerumi/rec.txt
