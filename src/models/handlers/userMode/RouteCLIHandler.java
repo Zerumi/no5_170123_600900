@@ -12,7 +12,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Current implementation of ModuleHandler for Route Model.
+ * Implementation of ModuleHandler for Route Model.
  *
  * @since 1.0
  * @author Zerumi

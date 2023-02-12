@@ -9,7 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Current implementation of ModuleHandler for Coordinates Model.
+ * Implementation of ModuleHandler for Coordinates Model.
  *
  * @since 1.0
  * @author Zerumi

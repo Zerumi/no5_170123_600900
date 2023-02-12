@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="checkRecursion for script executing added + bug fixes, part 5">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/no5_170123_600900_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/cmd.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testFiles/rec5.txt" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug &amp; docs fixes, part 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676161182441</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="bug &amp; docs fixes, part 6">
+      <created>1676162242594</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162242594</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +222,8 @@
     <MESSAGE value="critical solid violate fixed, building objects by nonCLI added" />
     <MESSAGE value="bug fixes, part 4" />
     <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkRecursion for script executing added + bug fixes, part 5" />
+    <MESSAGE value="bug &amp; docs fixes, part 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug &amp; docs fixes, part 6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

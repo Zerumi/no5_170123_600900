@@ -9,7 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Current implementation of ModuleHandler for Location Model.
+ * Implementation of ModuleHandler for Location Model.
  *
  * @since 1.0
  * @author Zerumi
