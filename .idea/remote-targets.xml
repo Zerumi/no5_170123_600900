@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="s367837@se.ifmo.ru:2222" type="ssh/sftp" uuid="1c2ad8b1-50c6-4277-8b65-f1198da63e21">
+        <config>
+          <option name="projectRootOnTarget" value="/home/studs/s367837/Programming/lab5" />
+          <option name="serverName" value="s367837@se.ifmo.ru:2222 password" />
+        </config>
+        <ContributedStateBase type="GradleRuntime">
+          <config />
+        </ContributedStateBase>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.6/Contents/Home" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

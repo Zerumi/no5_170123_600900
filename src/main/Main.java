@@ -1,3 +1,5 @@
+package main;
+
 import commandManager.CommandExecutor;
 import commandManager.CommandMode;
 import fileLogic.Loader;

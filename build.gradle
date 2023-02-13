@@ -1,0 +1,21 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceSets.main.java.srcDirs = ['src']
+
+application {
+    mainClass = 'main.Main'
+}
+
+run {
+    standardInput = System.in
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'main.Main'
+        )
+    }
+}
