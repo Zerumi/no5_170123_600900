@@ -34,14 +34,13 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
-        if (!Utilities.isNumeric(args[1]))
-        {
+        if (Utilities.isNotNumeric(args[1])) {
             System.out.println("Provided argument \"" + args[1] + "\" is not a number! Try again.");
             return;
         }
 
 
-        int greaterThan = 0;
+        int greaterThan;
 
         try {
             greaterThan = Integer.parseInt(args[1]);
