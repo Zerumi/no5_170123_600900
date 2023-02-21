@@ -2,11 +2,13 @@ package commandManager.commands;
 
 import commandManager.CommandManager;
 
+import java.util.Optional;
+
 /**
  * Shows reference about available commands.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class HelpCommand implements BaseCommand {
     @Override
@@ -31,10 +33,8 @@ public class HelpCommand implements BaseCommand {
         {
             for (int i = 1; i < args.length; i++)
             {
-                // TODO: Handle wrong arguments!
                 var command = manager.getCommands().get(args[i]);
-                System.out.println(args[i] + " -- " + command.getDescr());
-                System.out.println();
+                System.out.println(args[i] + " -- " + Optional.ofNullable(command).map(BaseCommand::getDescr).orElse("This command is not found in manager"));
             }
         }
     }

@@ -16,6 +16,6 @@ public class CoordXValidator implements Validator<Double> {
      */
     @Override
     public boolean validate(Double value) {
-        return value > -107;
+        return value > -107 && value <= Double.MAX_VALUE;
     }
 }

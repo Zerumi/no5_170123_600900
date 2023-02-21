@@ -2,7 +2,6 @@ package commandManager.commands;
 
 import exceptions.WrongAmountOfArgumentsException;
 import fileLogic.Saver;
-import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -28,8 +27,6 @@ public class SaveCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
-        Utilities.checkArgumentsOrThrow(args.length, 1);
-
         System.out.println("Saving...");
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
         Saver<HashSet<Route>, Route> saver = new Saver<>(Route.class);

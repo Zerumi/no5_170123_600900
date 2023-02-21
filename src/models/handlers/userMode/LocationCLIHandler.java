@@ -1,9 +1,14 @@
 package models.handlers.userMode;
 
+import exceptions.BuildObjectException;
+import exceptions.StreamInterruptedException;
+import main.Utilities;
 import models.Location;
 import models.handlers.ModuleHandler;
 import models.validators.LocationNameValidator;
+import models.validators.LocationXValidator;
 import models.validators.LocationYZValidator;
+import models.validators.Validator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -21,115 +26,101 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
      * @return Built object
      */
     @Override
-    public Location buildObject() {
-        System.out.println("Generating object...");
-        Location result = new Location();
-        System.out.println("Welcome to master of Location object creation!");
-        System.out.println("Follow the instructions to setup your object.");
-        System.out.println();
+    public Location buildObject() throws BuildObjectException {
+        try {
+            System.out.println("Generating object...");
+            Location result = new Location();
+            System.out.println("Welcome to master of Location object creation!");
+            System.out.println("Follow the instructions to setup your object.");
+            System.out.println();
 
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        while (true)
-        {
-            try {
-                // TODO: Validate Infinity
-                System.out.println("Enter the value of x (Type: float)");
-                float value = 0;
-                if (scanner.hasNextLine())
-                {
-                    String line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        value = Float.parseFloat(line);
+            Validator<Float> locationXValidator = new LocationXValidator();
+
+            while (true) {
+                try {
+                    System.out.println("Enter the value of x (Type: float)");
+                    float value = 0;
+                    if (Utilities.hasNextLineOrThrow(scanner)) {
+                        String line = scanner.nextLine();
+                        if (!line.isEmpty())
+                            value = Float.parseFloat(line);
+                    }
+                    if (!locationXValidator.validate(value)) {
+                        System.out.println("Value violates restrictions for field! Try again.");
+                        System.out.println("Restrictions: IEEE 754 Float value.");
+                        continue;
+                    }
+                    result.setX(value);
+                } catch (InputMismatchException | NumberFormatException e) {
+                    System.out.println("Wrong input! Try again.");
+                    continue;
                 }
-                result.setX(value);
-            } catch (InputMismatchException | NumberFormatException e)
-            {
-                System.out.println("Wrong input! Try again.");
-                continue;
+                break;
             }
-            break;
+
+            LocationYZValidator yzValidator = new LocationYZValidator();
+
+
+            String yInvitation = "Enter the value of y (Type: Long)";
+            result.setY(handleYZInput(scanner, yzValidator, yInvitation));
+
+            String zInvitation = "Enter the value of z (Type: Long)";
+            result.setZ(handleYZInput(scanner, yzValidator, zInvitation));
+
+            while (true) {
+                LocationNameValidator nameValidator = new LocationNameValidator();
+                try {
+                    System.out.println("Enter the value of name (Type: String)");
+                    System.out.println("This field may be skipped to fill");
+                    String value = null;
+                    if (Utilities.hasNextLineOrThrow(scanner)) {
+                        String line = scanner.nextLine();
+                        if (!line.isEmpty())
+                            value = line;
+                    }
+                    if (!nameValidator.validate(value)) {
+                        System.out.println("Value violates restrictions for field! Try again.");
+                        System.out.println("Restrictions: Should be not empty.");
+                        continue;
+                    }
+                    result.setName(value);
+                } catch (InputMismatchException e) {
+                    System.out.println("Wrong input! Try again.");
+                }
+                break;
+            }
+
+            System.out.println("Object setup completed! Sending result...");
+
+            return result;
+        } catch (StreamInterruptedException e) {
+            throw new BuildObjectException("Во время конструирования объекта произошла ошибка: " + e.getMessage());
         }
+    }
 
-        LocationYZValidator yzValidator = new LocationYZValidator();
-
-        while (true)
-        {
+    private Long handleYZInput(Scanner scanner, Validator<Long> yzValidator, String invitation) throws StreamInterruptedException {
+        Long value = null;
+        while (true) {
             try {
-                System.out.println("Enter the value of y (Type: Long)");
-                Long value = null;
-                if (scanner.hasNextLine())
-                {
+                System.out.println(invitation);
+                if (Utilities.hasNextLineOrThrow(scanner)) {
                     String line = scanner.nextLine();
                     if (!line.isEmpty())
                         value = Long.valueOf(line);
                 }
-                if (!yzValidator.validate(value))
-                {
+                if (!yzValidator.validate(value)) {
                     System.out.println("Value violates restrictions for field! Try again.");
+                    System.out.println("Restrictions: Should be in range [-9223372036854775808; 9223372036854775807] and not null");
                     continue;
                 }
-                result.setY(value);
-            } catch (InputMismatchException | NumberFormatException e)
-            {
+            } catch (InputMismatchException | NumberFormatException e) {
                 System.out.println("Wrong input! Try again.");
                 continue;
             }
             break;
         }
-
-        while (true)
-        {
-            try {
-                System.out.println("Enter the value of z (Type: Long)");
-                Long value = null;
-                if (scanner.hasNextLine())
-                {
-                    String line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        value = Long.valueOf(line);
-                }
-                if (!yzValidator.validate(value))
-                {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    continue;
-                }
-                result.setZ(value);
-            } catch (InputMismatchException | NumberFormatException e)
-            {
-                System.out.println("Wrong input! Try again.");
-                continue;
-            }
-            break;
-        }
-
-        while (true)
-        {
-            LocationNameValidator nameValidator = new LocationNameValidator();
-            try {
-                System.out.println("Enter the value of name (Type: String)");
-                System.out.println("This field may be skipped to fill");
-                String value = null;
-                if (scanner.hasNextLine())
-                {
-                    String line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        value = line;
-                }
-                if (!nameValidator.validate(value)) {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    continue;
-                }
-                result.setName(value);
-            } catch (InputMismatchException e)
-            {
-                System.out.println("Wrong input! Try again.");
-            }
-            break;
-        }
-
-        System.out.println("Object setup completed! Sending result...");
-
-        return result;
+        return value;
     }
 }

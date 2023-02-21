@@ -16,6 +16,6 @@ public class CoordYValidator implements Validator<Float> {
      */
     @Override
     public boolean validate(Float value) {
-        return value != null && value > -39;
+        return value != null && value > -39 && value <= Float.MAX_VALUE;
     }
 }

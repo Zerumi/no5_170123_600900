@@ -4,35 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="Execute script recursion fixed, better user-friendly style, some exceptions hided">
-      <change afterPath="$PROJECT_DIR$/docs/exceptions/BuildObjectException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exceptions/CommandInterruptedException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exceptions/WrongAmountOfArgumentsException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/legal/COPYRIGHT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/main/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/main/Utilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/jquery-3.5.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script-dir/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/BuildObjectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/CommandInterruptedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/WrongAmountOfArgumentsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_02_2023,_13_25_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug fixes, help cmd improved, validators tuned to inf values">
+      <change afterPath="$PROJECT_DIR$/src/exceptions/StreamInterruptedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/validators/LocationXValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
@@ -61,8 +35,10 @@
       <change beforePath="$PROJECT_DIR$/docs/commandManager/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commandManager/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/BuildObjectException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/BuildObjectException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/CommandInterruptedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/CommandInterruptedException.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/exceptions/WrongAmountOfArgumentsException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/WrongAmountOfArgumentsException.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/exceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/exceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" afterDir="false" />
@@ -98,9 +74,10 @@
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jquery-ui.overrides.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jquery-ui.overrides.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/legal/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/docs/legal/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/legal/jquery.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/legal/jquery.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/Utilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/Utilities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/models/Coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Coordinates.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/models/Location.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Location.html" afterDir="false" />
@@ -138,38 +115,17 @@
       <change beforePath="$PROJECT_DIR$/docs/models/validators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script-dir/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/cmd.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,9 +208,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="models.validators" />
       <recent name="exceptions" />
       <recent name="models.handlers" />
-      <recent name="models.validators" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="main.Utilities" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -444,7 +403,7 @@
       <workItem from="1675840478759" duration="21322000" />
       <workItem from="1676163071208" duration="294000" />
       <workItem from="1676243165572" duration="23529000" />
-      <workItem from="1676717234067" duration="16942000" />
+      <workItem from="1676717234067" duration="25268000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -558,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676250338084</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Execute script recursion fixed, better user-friendly style, some exceptions hided">
+      <created>1676999683423</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676999683423</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +549,8 @@
     <MESSAGE value="docs fixes, final" />
     <MESSAGE value="add gradle" />
     <MESSAGE value="Execute script recursion fixed, better user-friendly style, some exceptions hided" />
-    <option name="LAST_COMMIT_MESSAGE" value="Execute script recursion fixed, better user-friendly style, some exceptions hided" />
+    <MESSAGE value="bug fixes, help cmd improved, validators tuned to inf values" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes, help cmd improved, validators tuned to inf values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -597,11 +564,6 @@
           <url>file://$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
           <line>49</line>
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Utilities.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
