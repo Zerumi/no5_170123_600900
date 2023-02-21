@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import exceptions.BuildObjectException;
 import models.Route;
 import models.comparators.RouteHashComparator;
 import models.handlers.CollectionHandler;
@@ -52,7 +53,7 @@ public class RemoveGreaterCommand implements BaseCommand {
         return "{element}";
     }
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws BuildObjectException {
         RouteHashComparator comparator = new RouteHashComparator();
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();

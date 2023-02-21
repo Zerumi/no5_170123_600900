@@ -46,7 +46,7 @@ public class Saver<T extends Collection<E>, E> {
         int iter = 0;
         for (E obj : collection) {
             Field[] fields = obj.getClass().getDeclaredFields();
-            System.out.println(Arrays.toString(fields));
+            //.out.println(Arrays.toString(fields));
             for (Field field : fields) {
                 try {
                     ArrayList<String> address = new ArrayList<>();

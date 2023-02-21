@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.NoSuchFileException;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -56,7 +57,7 @@ public class XMLWriter implements BaseWriter {
             {
                 writer.print("\t");
             }
-            myLogger.info("Opening: " + address[i] + "Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address));
+            myLogger.fine("Opening: " + address[i] + "Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address));
             writer.println("<" + address[i] + ">");
         }
         for (int j = 0; j < address.length + 1; j++)
@@ -71,7 +72,7 @@ public class XMLWriter implements BaseWriter {
                     writer.print("\t");
                 }
                 writer.println("</" + address[lastKnownI - 1] + ">");
-                myLogger.info("Closing: " + address[lastKnownI - 1]);
+                myLogger.fine("Closing: " + address[lastKnownI - 1]);
             }
             else break;
         }

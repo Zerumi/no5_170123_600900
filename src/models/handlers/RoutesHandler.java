@@ -82,7 +82,15 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void sort() {
-        this.routes = routes.stream().sorted(new RouteComparator()).collect(Collectors.toCollection(LinkedHashSet::new));
+        HashSet<Route> sorted = new HashSet();
+
+        for (Iterator<Route> it = routes.stream().sorted(new RouteComparator()).iterator(); it.hasNext(); ) {
+            Route sortedItem = it.next();
+
+            sorted.add(sortedItem);
+        }
+
+        this.routes = sorted;
     }
 
     /**
@@ -122,11 +130,13 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void validateElements() {
+        HashSet<Long> ids = new HashSet<>(getCollection().size());
+
         for (Iterator<Route> it = getCollection().iterator(); it.hasNext(); ) {
             Route toValid = it.next();
             Validator<Route> validator = new RouteValidator();
 
-            if (!validator.validate(toValid))
+            if (!validator.validate(toValid) || !ids.add(toValid.getId()))
             {
                 it.remove();
                 System.out.println("Element removed from collection: " + toValid);

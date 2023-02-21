@@ -1,14 +1,21 @@
 package commandManager.commands;
 
 import commandManager.CommandManager;
+import exceptions.BuildObjectException;
 import exceptions.UnknownCommandException;
+import exceptions.WrongAmountOfArgumentsException;
+import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
 import models.handlers.RoutesHandler;
+import models.validators.IdValidator;
+import models.validators.Validator;
 
+import java.net.URI;
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  * Updates element by its ID.
@@ -55,22 +62,23 @@ public class UpdateCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws BuildObjectException, WrongAmountOfArgumentsException {
+        Utilities.checkArgumentsOrThrow(args.length, 1);
+
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        CommandManager manager = new CommandManager();
-        Long id = Long.valueOf(args[1]);
+        Long finalId = Utilities.handleUserInputID(args[1]);
+        if (finalId == null) return;
 
-        ModuleHandler<Route> objHandler = new RouteCLIHandler();
-        Route newObj = objHandler.buildObject();
+        if(!collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), finalId)))
+        {
+            System.out.println("Element with that id doesn't exists.");
+            return;
+        }
+        Route newObj = handler.buildObject();
 
-        System.out.println("Updated ID value: " + id);
-        newObj.setId(id);
-
-        System.out.println("Removing previous element...");
-        try {
-            manager.executeCommand(new String[] {"remove_by_id", String.valueOf(id)});
-        } catch (UnknownCommandException ignored) {}
+        System.out.println("Updated ID value: " + finalId);
+        newObj.setId(finalId);
 
         collectionHandler.addElementToCollection(newObj);
 

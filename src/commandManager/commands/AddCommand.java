@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import exceptions.BuildObjectException;
 import models.Route;
 import models.handlers.*;
 import models.handlers.userMode.RouteCLIHandler;
@@ -48,7 +49,7 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws BuildObjectException {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         collectionHandler.addElementToCollection(handler.buildObject());

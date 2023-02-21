@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import exceptions.BuildObjectException;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
@@ -50,7 +51,7 @@ public class AddIfMinCommand implements BaseCommand {
         return "{element}";
     }
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws BuildObjectException {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         Route obj = handler.buildObject();

@@ -1,5 +1,10 @@
 package commandManager;
 
+import exceptions.BuildObjectException;
+import exceptions.CommandInterruptedException;
+import exceptions.UnknownCommandException;
+
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -15,20 +20,17 @@ public class CommandExecutor {
      * Start executing commands from InputStream.
      *
      * @param input commands stream (File, System.in, e.t.c.)
-     * @param mode variant of command behavior (see CommandMode enum)
+     * @param mode  variant of command behavior (see CommandMode enum)
      */
-    public void startExecuting(InputStream input, CommandMode mode)
-    {
+    public void startExecuting(InputStream input, CommandMode mode) {
         Scanner cmdScanner = new Scanner(input);
         CommandManager commandManager = new CommandManager(mode, cmdScanner);
-        while (cmdScanner.hasNext())
-        {
+        while (cmdScanner.hasNext()) {
             String line = cmdScanner.nextLine();
             if (line.isEmpty()) continue;
             try {
                 commandManager.executeCommand(line.split(" "));
-            } catch (Exception e) {
-                myLogger.log(Level.SEVERE, "В командном менеджере произошла ошибка! " + e);
+            } catch (CommandInterruptedException ex) {
                 if (mode.equals(CommandMode.CLI_UserMode))
                     myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу.");
                 else

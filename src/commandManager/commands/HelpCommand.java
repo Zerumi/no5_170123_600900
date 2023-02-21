@@ -31,6 +31,7 @@ public class HelpCommand implements BaseCommand {
         {
             for (int i = 1; i < args.length; i++)
             {
+                // TODO: Handle wrong arguments!
                 var command = manager.getCommands().get(args[i]);
                 System.out.println(args[i] + " -- " + command.getDescr());
                 System.out.println();

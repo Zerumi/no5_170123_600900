@@ -1,9 +1,9 @@
-unnamed package
 commandManager
 commandManager.commands
 exceptions
 fileLogic
 fileLogic.editors
+main
 models
 models.comparators
 models.handlers

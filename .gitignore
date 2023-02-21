@@ -27,3 +27,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Gradle build ###
+/build/
+/.gradle/
+/out/

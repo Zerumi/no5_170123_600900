@@ -6,49 +6,21 @@
 			1
 		</id>
 		<name>
-			24635
+			dsfg
 		</name>
 		<coordinates>
 			<x>
-				732.0
+				2345.0
 			</x>
 			<y>
-				753.0
+				234.0
 			</y>
 		</coordinates>
 		<creationDate>
-			2023-02-09T14:41:13.269Z
+			0003-02-14T09:54:02.308Z
 		</creationDate>
-		<from>
-			<x>
-				357.0
-			</x>
-			<y>
-				1347
-			</y>
-			<z>
-				23
-			</z>
-			<name>
-				743
-			</name>
-		</from>
-		<to>
-			<x>
-				246754.0
-			</x>
-			<y>
-				756
-			</y>
-			<z>
-				436
-			</z>
-			<name>
-				57856
-			</name>
-		</to>
 		<distance>
-			47
+			234
 		</distance>
 	</route0>
 	<route1>
@@ -56,334 +28,49 @@
 			2
 		</id>
 		<name>
-			34643
+			execute_script
 		</name>
 		<coordinates>
 			<x>
-				77.0
+				235.0
 			</x>
 			<y>
-				3457.0
+				6345.0
 			</y>
 		</coordinates>
 		<creationDate>
-			2023-02-09T14:41:19.818Z
+			2023-02-20T21:24:53.532Z
 		</creationDate>
 		<from>
 			<x>
-				6834.0
+				23.0
 			</x>
 			<y>
-				5742
+				56
 			</y>
 			<z>
-				724
+				23456
 			</z>
+			<name>
+				24356
+			</name>
 		</from>
 		<to>
 			<x>
-				347.0
+				3245.0
 			</x>
 			<y>
-				57
+				2345
 			</y>
 			<z>
-				457
+				423
 			</z>
 			<name>
-				34
+				2345
 			</name>
 		</to>
 		<distance>
-			7454
+			6245
 		</distance>
 	</route1>
-	<route2>
-		<id>
-			3
-		</id>
-		<name>
-			456
-		</name>
-		<coordinates>
-			<x>
-				374.0
-			</x>
-			<y>
-				534574.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:41:27.434Z
-		</creationDate>
-		<from>
-			<x>
-				34745.0
-			</x>
-			<y>
-				7534
-			</y>
-			<z>
-				735
-			</z>
-			<name>
-				5
-			</name>
-		</from>
-		<distance>
-			4366
-		</distance>
-	</route2>
-	<route3>
-		<id>
-			4
-		</id>
-		<name>
-			436
-		</name>
-		<coordinates>
-			<x>
-				54723.0
-			</x>
-			<y>
-				7.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:41:37.154Z
-		</creationDate>
-		<from>
-			<x>
-				345723.0
-			</x>
-			<y>
-				4634
-			</y>
-			<z>
-				6723
-			</z>
-			<name>
-				472346
-			</name>
-		</from>
-		<to>
-			<x>
-				0.0
-			</x>
-			<y>
-				46
-			</y>
-			<z>
-				4
-			</z>
-		</to>
-		<distance>
-			23
-		</distance>
-	</route3>
-	<route4>
-		<id>
-			5
-		</id>
-		<name>
-			45325755247
-		</name>
-		<coordinates>
-			<x>
-				524.0
-			</x>
-			<y>
-				63.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:41:43.299Z
-		</creationDate>
-		<from>
-			<x>
-				327.0
-			</x>
-			<y>
-				67
-			</y>
-			<z>
-				346
-			</z>
-			<name>
-				653
-			</name>
-		</from>
-		<to>
-			<x>
-				4647.0
-			</x>
-			<y>
-				345
-			</y>
-			<z>
-				563
-			</z>
-			<name>
-				45
-			</name>
-		</to>
-		<distance>
-			332
-		</distance>
-	</route4>
-	<route5>
-		<id>
-			6
-		</id>
-		<name>
-			245
-		</name>
-		<coordinates>
-			<x>
-				632.0
-			</x>
-			<y>
-				345346.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:41:52.077Z
-		</creationDate>
-		<from>
-			<x>
-				34432.0
-			</x>
-			<y>
-				53
-			</y>
-			<z>
-				425
-			</z>
-			<name>
-				3245
-			</name>
-		</from>
-		<to>
-			<x>
-				45.0
-			</x>
-			<y>
-				54
-			</y>
-			<z>
-				54
-			</z>
-		</to>
-		<distance>
-			3
-		</distance>
-	</route5>
-	<route6>
-		<id>
-			7
-		</id>
-		<name>
-			43
-		</name>
-		<coordinates>
-			<x>
-				547346.0
-			</x>
-			<y>
-				43.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:42:00.535Z
-		</creationDate>
-		<from>
-			<x>
-				454.0
-			</x>
-			<y>
-				54
-			</y>
-			<z>
-				5
-			</z>
-			<name>
-				45
-			</name>
-		</from>
-		<distance>
-			436
-		</distance>
-	</route6>
-	<route7>
-		<id>
-			8
-		</id>
-		<name>
-			436
-		</name>
-		<coordinates>
-			<x>
-				546.0
-			</x>
-			<y>
-				6.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:42:07.931Z
-		</creationDate>
-		<distance>
-			4
-		</distance>
-	</route7>
-	<route8>
-		<id>
-			9
-		</id>
-		<name>
-			436
-		</name>
-		<coordinates>
-			<x>
-				5373.0
-			</x>
-			<y>
-				7554.0
-			</y>
-		</coordinates>
-		<creationDate>
-			2023-02-09T14:42:15.036Z
-		</creationDate>
-		<from>
-			<x>
-				5645.0
-			</x>
-			<y>
-				762
-			</y>
-			<z>
-				46
-			</z>
-			<name>
-				537
-			</name>
-		</from>
-		<to>
-			<x>
-				63.0
-			</x>
-			<y>
-				6456
-			</y>
-			<z>
-				564
-			</z>
-			<name>
-				64
-			</name>
-		</to>
-		<distance>
-			65
-		</distance>
-	</route8>
 </routes>

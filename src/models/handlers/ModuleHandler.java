@@ -1,5 +1,7 @@
 package models.handlers;
 
+import exceptions.BuildObjectException;
+
 /**
  * Base interface for ModelHandler. Uses for building objects.
  *
@@ -15,5 +17,5 @@ public interface ModuleHandler<T> {
      *
      * @return Created object.
      */
-    T buildObject();
+    T buildObject() throws BuildObjectException;
 }

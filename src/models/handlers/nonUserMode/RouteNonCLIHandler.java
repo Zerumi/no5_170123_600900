@@ -1,5 +1,6 @@
 package models.handlers.nonUserMode;
 
+import exceptions.BuildObjectException;
 import models.Coordinates;
 import models.Location;
 import models.Route;
@@ -37,7 +38,7 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
     }
 
     @Override
-    public Route buildObject() {
+    public Route buildObject() throws BuildObjectException {
         System.out.println("Generating object...");
         Route result = new Route();
         int valuesToRead = 12;
@@ -103,7 +104,7 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
             if (!validator.validate(result))
             {
                 System.out.println("Object's invalid, skipping...");
-                throw new IllegalArgumentException("Созданный элемент нарушает ограничения и не может быть добавлен в коллекцию!");
+                throw new BuildObjectException("Созданный элемент нарушает ограничения и не может быть добавлен в коллекцию!");
             }
             System.out.println("Validate successful! Sending result...");
 
@@ -111,10 +112,8 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
 
         } catch (NumberFormatException | NullPointerException e)
         {
-            myLogger.log(Level.SEVERE, "Во время построения объекта произошла ошибка: " + e);
             myLogger.log(Level.WARNING, "Объект будет пропущен. Устраните ошибку в скрипте и повторите попытку.");
-            System.out.println("Object creation failed... Skipping... " + e);
-            throw new IllegalArgumentException(e);
+            throw new BuildObjectException("Предоставленные данные для построения объекта неверны. Воспользуйтесь ручным вводом или исправьте команду в скрипте.");
         }
     }
 

@@ -6,6 +6,7 @@ import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -96,6 +97,10 @@ public class Loader<T extends Collection<E>, E> {
 
         } catch (IOException e) {
             myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
+        }
+        catch (Exception e)
+        {
+            System.out.println("File reading failed due to broken XML file. Fix it manually & try again.");
         }
 
         return resultCollection;
@@ -199,7 +204,7 @@ public class Loader<T extends Collection<E>, E> {
             {
                 fieldToSet.set(object, convert(nextType, value));
             }
-            catch (NullPointerException | NumberFormatException e)
+            catch (NullPointerException | NumberFormatException | DateTimeParseException e)
             {
                 myLogger.log(Level.WARNING, "XML файл поврежден. Строка с данными " + value + " (Адрес: " + Arrays.toString(fullPath) + ") была пропущена.");
                 myLogger.log(Level.INFO, "Если вы считаете, что произошла ошибка, добавьте в регистр обработчик. Взгляните на Loader.setupConverter в Javadoc.");

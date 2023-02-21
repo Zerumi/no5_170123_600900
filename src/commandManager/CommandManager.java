@@ -1,13 +1,17 @@
 package commandManager;
 
 import commandManager.commands.*;
+import exceptions.BuildObjectException;
+import exceptions.CommandInterruptedException;
 import exceptions.UnknownCommandException;
+import exceptions.WrongAmountOfArgumentsException;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.nonUserMode.RouteNonCLIHandler;
 import models.handlers.userMode.RouteCLIHandler;
 
 import java.util.LinkedHashMap;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -99,17 +103,22 @@ public class CommandManager {
      * Universe method for command executing.
      *
      * @param args full separated line from stream
-     * @throws UnknownCommandException If command isn't found.
      */
-    public void executeCommand(String[] args) throws UnknownCommandException {
+    public void executeCommand(String[] args) {
         try {
-            commands.get(args[0]).execute(args);
-        } catch (NullPointerException e) {
-            UnknownCommandException transfer = new UnknownCommandException("Указанная команда не была обнаружена и/или был предоставлен некорректный аргумент.");
-            transfer.initCause(e);
-            throw transfer;
-        } catch (IllegalArgumentException e) {
-            myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за возникшей проблемы: " + e);
+            Optional.ofNullable(commands.get(args[0])).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена")).execute(args);
+        } catch (IllegalArgumentException | NullPointerException e) {
+            myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")");
+            throw new CommandInterruptedException(e);
+        } catch (BuildObjectException | UnknownCommandException e) {
+            myLogger.log(Level.SEVERE, e.getMessage());
+            throw new CommandInterruptedException(e);
+        } catch (WrongAmountOfArgumentsException e) {
+            myLogger.log(Level.SEVERE, "Wrong amount of arguments! " + e.getMessage());
+            throw new CommandInterruptedException(e);
+        } catch (Exception e) {
+            myLogger.log(Level.SEVERE, "В командном менеджере произошла непредвиденная ошибка! " + e.getMessage());
+            throw new CommandInterruptedException(e);
         }
     }
 }

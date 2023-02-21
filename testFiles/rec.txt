@@ -1,1 +1,2 @@
-execute_script /users/zerumi/rec1.txt
+execute_script /Users/zerumi/IdeaProjects/no5_170123_600900/testFiles/rec1.txt
+execute_script /Users/zerumi/IdeaProjects/no5_170123_600900/testFiles/rec1.txt

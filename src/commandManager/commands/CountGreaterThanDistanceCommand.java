@@ -1,5 +1,7 @@
 package commandManager.commands;
 
+import exceptions.WrongAmountOfArgumentsException;
+import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -29,11 +31,31 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
         return "distance";
     }
     @Override
-    public void execute(String[] args) {
-        int greaterThan = Integer.parseInt(args[1]);
+    public void execute(String[] args) throws WrongAmountOfArgumentsException {
+        Utilities.checkArgumentsOrThrow(args.length, 1);
+
+        if (!Utilities.isNumeric(args[1]))
+        {
+            System.out.println("Provided argument \"" + args[1] + "\" is not a number! Try again.");
+            return;
+        }
+
+
+        int greaterThan = 0;
+
+        try {
+            greaterThan = Integer.parseInt(args[1]);
+        } catch (NumberFormatException e)
+        {
+            System.out.println("Provided argument: \"" + args[1] + "\" is too large for distance field. Try again");
+            return;
+        }
+
+
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
         List<Integer> distances = collectionHandler.getCollection().stream().map(Route::getDistance).toList();
 
-        System.out.println("Total count: " + distances.stream().map(x -> x > greaterThan).count());
+        int finalGreaterThan = greaterThan;
+        System.out.println("Total count: " + distances.stream().map(x -> x > finalGreaterThan).count());
     }
 }

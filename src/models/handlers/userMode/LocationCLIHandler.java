@@ -33,6 +33,7 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
         while (true)
         {
             try {
+                // TODO: Validate Infinity
                 System.out.println("Enter the value of x (Type: float)");
                 float value = 0;
                 if (scanner.hasNextLine())
