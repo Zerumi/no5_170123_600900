@@ -40,7 +40,7 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
 
             while (true) {
                 try {
-                    System.out.println("Enter the value of x (Type: float)");
+                    System.out.println("Enter the value of x (Type: float (default value: 0.0f))");
                     float value = 0;
                     if (Utilities.hasNextLineOrThrow(scanner)) {
                         String line = scanner.nextLine();
@@ -55,6 +55,7 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
                     result.setX(value);
                 } catch (InputMismatchException | NumberFormatException e) {
                     System.out.println("Wrong input! Try again.");
+                    System.out.println("You should enter a real number, matches with IEEE 754 Float value standard (not so big/small).");
                     continue;
                 }
                 break;
@@ -71,24 +72,20 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
 
             while (true) {
                 LocationNameValidator nameValidator = new LocationNameValidator();
-                try {
-                    System.out.println("Enter the value of name (Type: String)");
-                    System.out.println("This field may be skipped to fill");
-                    String value = null;
-                    if (Utilities.hasNextLineOrThrow(scanner)) {
-                        String line = scanner.nextLine();
-                        if (!line.isEmpty())
-                            value = line;
-                    }
-                    if (!nameValidator.validate(value)) {
-                        System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Should be not empty.");
-                        continue;
-                    }
-                    result.setName(value);
-                } catch (InputMismatchException e) {
-                    System.out.println("Wrong input! Try again.");
+                System.out.println("Enter the value of name (Type: String)");
+                System.out.println("This field may be skipped to fill");
+                String value = null;
+                if (Utilities.hasNextLineOrThrow(scanner)) {
+                    String line = scanner.nextLine();
+                    if (!line.isEmpty())
+                        value = line;
                 }
+                if (!nameValidator.validate(value)) {
+                    System.out.println("Value violates restrictions for field! Try again.");
+                    System.out.println("Restrictions: Should be not empty.");
+                    continue;
+                }
+                result.setName(value);
                 break;
             }
 
@@ -112,11 +109,12 @@ public class LocationCLIHandler implements ModuleHandler<Location> {
                 }
                 if (!yzValidator.validate(value)) {
                     System.out.println("Value violates restrictions for field! Try again.");
-                    System.out.println("Restrictions: Should be in range [-9223372036854775808; 9223372036854775807] and not null");
+                    System.out.println("Restrictions: Number should be in range [-9223372036854775808; 9223372036854775807] and not null.");
                     continue;
                 }
             } catch (InputMismatchException | NumberFormatException e) {
                 System.out.println("Wrong input! Try again.");
+                System.out.println("You should enter a number in range [-9223372036854775808; 9223372036854775807], it shouldn't be decimal.");
                 continue;
             }
             break;

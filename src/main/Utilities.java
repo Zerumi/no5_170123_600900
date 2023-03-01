@@ -14,6 +14,9 @@ public class Utilities {
         if (Utilities.isNotNumeric(input)) {
             System.out.println("Provided argument id: \"" + input + "\" is not a number! Try again.");
             return null;
+        } else if (input.contains(".")) {
+            System.out.println("ID field cannot accept decimal values. Try again.");
+            return null;
         }
 
         Long id = null;

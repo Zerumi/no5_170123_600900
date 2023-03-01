@@ -90,7 +90,7 @@ public class RouteCLIHandler implements ModuleHandler<Route> {
             while (true) {
                 try {
                     DistanceValidator validator = new DistanceValidator();
-                    System.out.println("Enter the value of distance (Type: int)");
+                    System.out.println("Enter the value of distance (Type: int (default value: 0))");
                     int value = 0;
                     if (Utilities.hasNextLineOrThrow(scanner)) {
                         String line = scanner.nextLine();
@@ -99,12 +99,13 @@ public class RouteCLIHandler implements ModuleHandler<Route> {
                     }
                     if (!validator.validate(value)) {
                         System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Should be grater than 1.");
+                        System.out.println("Restrictions: Number should be grater than 1.");
                         continue;
                     }
                     result.setDistance(value);
                 } catch (InputMismatchException | NumberFormatException e) {
                     System.out.println("Wrong input! Try again.");
+                    System.out.println("You should enter a number in range [-2147483648; 2147483647], it shouldn't be decimal.");
                     continue;
                 }
                 break;

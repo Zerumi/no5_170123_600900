@@ -2,7 +2,7 @@ package commandManager.commands;
 
 import exceptions.BuildObjectException;
 import models.Route;
-import models.comparators.RouteHashComparator;
+import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
 import models.handlers.RoutesHandler;
@@ -45,7 +45,7 @@ public class RemoveGreaterCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Removes elements from collection greater than given in argument.";
+        return "Removes elements from collection greater than given in argument. Comparing is set by distance.";
     }
 
     @Override
@@ -54,12 +54,12 @@ public class RemoveGreaterCommand implements BaseCommand {
     }
     @Override
     public void execute(String[] args) throws BuildObjectException {
-        RouteHashComparator comparator = new RouteHashComparator();
+        RouteDistanceComparator comparator = new RouteDistanceComparator();
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         Route greaterThan = handler.buildObject();
-        System.out.println("Hashcode: " + greaterThan.hashCode());
+        System.out.println("Distance: " + greaterThan.getDistance());
         var iterator = collectionHandler.getCollection().iterator();
 
         int count = 0;
@@ -67,10 +67,10 @@ public class RemoveGreaterCommand implements BaseCommand {
         while (iterator.hasNext())
         {
             var current = iterator.next();
-            System.out.print("Comparing: current -- " + current.hashCode() + " vs " + greaterThan.hashCode());
+            System.out.print("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
             if (comparator.compare(current, greaterThan) > 0)
             {
-                System.out.println();
+                System.out.println(" -- Greater / Removing...");
                 System.out.println("Removing element: " + current);
                 iterator.remove();
                 count++;

@@ -32,7 +32,7 @@ public class CommandExecutor {
                 commandManager.executeCommand(line.split(" "));
             } catch (CommandInterruptedException ex) {
                 if (mode.equals(CommandMode.CLI_UserMode))
-                    myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу.");
+                    myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");
                 else
                     myLogger.log(Level.INFO, "Команда была пропущена... Обработчик продолжает работу");
             }

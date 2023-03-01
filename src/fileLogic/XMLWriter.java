@@ -35,11 +35,15 @@ public class XMLWriter implements BaseWriter {
         } catch (FileNotFoundException e) {
             File xml = new File(path);
             try {
-                boolean ignored = xml.createNewFile();
+                boolean isCreated = xml.createNewFile();
+                if (isCreated) writeToFile(path, values);
+                else throw new IOException("Cannot create file.");
             } catch (IOException ex) {
                 ex.initCause(e);
-                System.out.println("Creating file finished with error! " + ex);
+                System.out.println("We cannot access file, so we tried to create it...");
+                System.out.println("But creating file finished with unexpected error.");
                 System.out.println("Try to create this file manually: " + path);
+                System.out.println("Check access to file if it exists.");
                 System.out.println("Or change environment variable.");
                 System.out.println("Please, don't modify/remove this xml file. It goes to unknown consequences.");
             }

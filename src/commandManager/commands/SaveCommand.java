@@ -33,6 +33,6 @@ public class SaveCommand implements BaseCommand {
 
         saver.saveCollection(collectionHandler.getCollection(), "lab5");
 
-        System.out.println("Saved!");
+        System.out.println("Executed.");
     }
 }

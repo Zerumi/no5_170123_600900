@@ -1,4 +1,4 @@
-execute_script /users/zerumi/rec4.txt
+execute_scrip /Users/zerumi/IdeaProjects/no5_170123_600900/testFiles/rec4.txt
 sdffdhds
 bsd
 fgbs

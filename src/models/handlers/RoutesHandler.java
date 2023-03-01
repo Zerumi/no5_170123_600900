@@ -82,7 +82,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void sort() {
-        HashSet<Route> sorted = new HashSet();
+        HashSet<Route> sorted = new HashSet<>();
 
         for (Iterator<Route> it = routes.stream().sorted(new RouteComparator()).iterator(); it.hasNext(); ) {
             Route sortedItem = it.next();

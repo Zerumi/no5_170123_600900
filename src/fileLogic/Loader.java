@@ -6,6 +6,8 @@ import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.nio.charset.CharacterCodingException;
+import java.nio.file.AccessDeniedException;
 import java.time.format.DateTimeParseException;
 import java.util.*;
 import java.util.logging.Level;
@@ -74,34 +76,20 @@ public class Loader<T extends Collection<E>, E> {
      * XML filepath will be taken from Environment variable
      *
      * @param envKey Key of System env. var to XML filepath
-     *
      * @return Filled collection of type T
      */
-    public T loadFromXMLbyEnvKey(String envKey)
-    {
-        try {
-            String xmlPath = System.getenv(envKey);
-            if (xmlPath == null)
-            {
-                myLogger.log(Level.SEVERE, "Отсутствует переменная окружения с путем к загрузочному файлу!");
-                myLogger.log(Level.INFO, "Задайте переменную окружения с именем \"lab5\", поместив туда полный путь к XML файлу.");
-                myLogger.log(Level.WARNING, "Выполнение программы не может быть продолжено.");
-                System.exit(-1);
-            }
-
-            BaseReader reader = new XMLReader();
-            LinkedHashMap<String[], String> parsedValues = reader.readFromFile(xmlPath);
-
-            if (!parsedValues.isEmpty())
-                fillCollection(parsedValues);
-
-        } catch (IOException e) {
-            myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
+    public T loadFromXMLbyEnvKey(String envKey) {
+        String xmlPath = System.getenv(envKey);
+        if (xmlPath == null) {
+            myLogger.log(Level.SEVERE, "Отсутствует переменная окружения с путем к загрузочному файлу!");
+            myLogger.log(Level.INFO, "Задайте переменную окружения с именем \"lab5\", поместив туда полный путь к XML файлу.");
+            myLogger.log(Level.WARNING, "Выполнение программы не может быть продолжено.");
+            System.exit(-1);
         }
-        catch (Exception e)
-        {
-            System.out.println("File reading failed due to broken XML file. Fix it manually & try again.");
-        }
+
+        BaseReader reader = new XMLReader();
+
+        resultCollection = loadFromFile(xmlPath, reader);
 
         return resultCollection;
     }
@@ -114,12 +102,21 @@ public class Loader<T extends Collection<E>, E> {
      */
     public T loadFromFile(String path, BaseReader reader)
     {
-        try
-        {
+        try {
             LinkedHashMap<String[], String> parsedValues = reader.readFromFile(path);
-            fillCollection(parsedValues);
+
+            if (!parsedValues.isEmpty())
+                fillCollection(parsedValues);
+
+        } catch (AccessDeniedException ex) {
+            System.out.println("/ ! \\ File reading failed because application cannot access to this file. Contact your administrator and ask him to write \'sudo chmod 755 $lab5\'");
+        } catch (CharacterCodingException ex) {
+            System.out.println("/ ! \\ File reading filed because system cannot understand file-coding. Contact your administrator.");
         } catch (IOException e) {
-            myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла ошибка! " + e);
+            System.out.println("/ ! \\ Something went wrong during reading the file. Loading was skipped...");
+            myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла непредвиденная ошибка! " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("/ ! \\ File reading failed due to broken XML file. Fix it manually & try again.");
         }
         return resultCollection;
     }
@@ -207,7 +204,7 @@ public class Loader<T extends Collection<E>, E> {
             catch (NullPointerException | NumberFormatException | DateTimeParseException e)
             {
                 myLogger.log(Level.WARNING, "XML файл поврежден. Строка с данными " + value + " (Адрес: " + Arrays.toString(fullPath) + ") была пропущена.");
-                myLogger.log(Level.INFO, "Если вы считаете, что произошла ошибка, добавьте в регистр обработчик. Взгляните на Loader.setupConverter в Javadoc.");
+                myLogger.log(Level.INFO, "Если вы считаете, что произошла ошибка, добавьте в регистр обработчик. Взгляните на Loader.setupConverter в Javadoc или свяжитесь с администратором.");
             }
         }
     }
@@ -225,9 +222,9 @@ public class Loader<T extends Collection<E>, E> {
         {
             result = fullClassOfElement.newInstance();
         } catch (InstantiationException e) {
-            myLogger.log(Level.SEVERE, "При инициализации элемента возникла проблема! " + e);
+            myLogger.log(Level.SEVERE, "При инициализации элемента возникла проблема! " + e.getMessage());
         } catch (IllegalAccessException e) {
-            myLogger.log(Level.SEVERE, "Ошибка доступа! " + e);
+            myLogger.log(Level.SEVERE, "Ошибка доступа! " + e.getMessage());
         }
         return result;
     }

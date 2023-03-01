@@ -37,8 +37,10 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
         if (Utilities.isNotNumeric(args[1])) {
             System.out.println("Provided argument \"" + args[1] + "\" is not a number! Try again.");
             return;
+        } else if (args[1].contains(",")) {
+            System.out.println("Distance field cannot accept decimal values. Try again");
+            return;
         }
-
 
         int greaterThan;
 
@@ -55,6 +57,6 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
         List<Integer> distances = collectionHandler.getCollection().stream().map(Route::getDistance).toList();
 
         int finalGreaterThan = greaterThan;
-        System.out.println("Total count: " + distances.stream().map(x -> x > finalGreaterThan).count());
+        System.out.println("Total count: " + distances.stream().map(x -> x.compareTo(finalGreaterThan)).filter(x -> x > 0).count());
     }
 }
