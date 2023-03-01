@@ -2,6 +2,7 @@ package commandManager.commands;
 
 import exceptions.BuildObjectException;
 import models.Route;
+import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
 import models.handlers.RoutesHandler;
@@ -56,7 +57,7 @@ public class AddIfMaxCommand implements BaseCommand {
 
         Route obj = handler.buildObject();
 
-        if (obj.compareTo(collectionHandler.getLastElement()) > 0)
+        if (obj.compareTo(collectionHandler.getMax(new RouteDistanceComparator())) > 0)
         {
             collectionHandler.addElementToCollection(obj);
             System.out.println("Element added!");

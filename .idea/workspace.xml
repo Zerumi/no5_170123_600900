@@ -4,32 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug fixes, part 7.4">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="add diagrams">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/remote-targets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteHashComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteHashComparator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/comparators/RouteComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteHashComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/comparators/RouteDistanceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/validators/LocationXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/cmd.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFiles/rec5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/rec5.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +62,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/routes.xml" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.5/lib/src.zip!/java.base/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,12 +100,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="models.validators" />
-      <recent name="exceptions" />
       <recent name="models.handlers" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="main.Utilities" />
+      <recent name="models.validators" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -133,7 +114,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no5_170123_600900 [jar]">
+  <component name="RunManager" selected="Gradle.no5_170123_600900 [run]">
     <configuration name="no5_170123_600900 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -278,8 +259,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no5_170123_600900 [jar]" />
         <item itemvalue="Gradle.no5_170123_600900 [run]" />
+        <item itemvalue="Gradle.no5_170123_600900 [jar]" />
         <item itemvalue="Gradle.no5_170123_600900 [build]" />
       </list>
     </recent_temporary>
@@ -309,12 +290,8 @@
       <workItem from="1675769234920" duration="29421000" />
       <workItem from="1675840478759" duration="21322000" />
       <workItem from="1676163071208" duration="294000" />
-      <workItem from="1676243165572" duration="23529000" />
-      <workItem from="1676717234067" duration="26300000" />
-      <workItem from="1677051031806" duration="2223000" />
-      <workItem from="1677159307578" duration="3473000" />
-      <workItem from="1677666933501" duration="6737000" />
-      <workItem from="1677675308233" duration="2592000" />
+      <workItem from="1676243165572" duration="7067000" />
+      <workItem from="1677709564940" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -421,45 +398,13 @@
       <option name="project" value="LOCAL" />
       <updated>1676162797496</updated>
     </task>
-    <task id="LOCAL-00016" summary="add gradle">
-      <created>1676250338084</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1676250338084</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Execute script recursion fixed, better user-friendly style, some exceptions hided">
-      <created>1676999683423</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1676999683423</updated>
-    </task>
-    <task id="LOCAL-00018" summary="bug fixes, help cmd improved, validators tuned to inf values, perfomance optimization">
-      <created>1677023439546</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1677023439546</updated>
-    </task>
-    <task id="LOCAL-00019" summary="bug fixes, part 7.4">
-      <created>1677023512824</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1677023512824</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add XML Reader" />
     <MESSAGE value="loader, part 2" />
@@ -476,15 +421,7 @@
     <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
     <MESSAGE value="bug &amp; docs fixes, part 6" />
     <MESSAGE value="docs fixes, final" />
-    <MESSAGE value="add gradle" />
-    <MESSAGE value="Execute script recursion fixed, better user-friendly style, some exceptions hided" />
-    <MESSAGE value="bug fixes, help cmd improved, validators tuned to inf values" />
-    <MESSAGE value="bug fixes, help cmd improved, validators tuned to inf values, perfomance optimization" />
-    <MESSAGE value="bug fixes, part 7.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes, part 7.4" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs fixes, final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,24 +435,6 @@
           <url>file://$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
           <line>49</line>
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java</url>
-          <line>60</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/fileLogic/XMLWriter.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,11 +8,14 @@
           <option name="serverName" value="s367837@se.ifmo.ru:2222 password" />
         </config>
         <ContributedStateBase type="GradleRuntime">
-          <config />
+          <config>
+            <option name="homePath" value="/home/studs/s367837/gradle/gradle-7.6/" />
+          </config>
         </ContributedStateBase>
         <ContributedStateBase type="JavaLanguageRuntime">
           <config>
-            <option name="homePath" value="$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.6/Contents/Home" />
+            <option name="homePath" value="/usr/local/" />
+            <option name="javaVersionString" value="17" />
           </config>
         </ContributedStateBase>
       </target>

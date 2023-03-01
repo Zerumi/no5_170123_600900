@@ -168,9 +168,9 @@ public class Route implements Comparable<Route> {
     public int compareTo(Route o) {
         if (o == null) return 1;
         if (o.id == null) return -1;
-        if (this.id - o.id < 0)
+        if (this.distance - o.distance < 0)
             return -1;
-        else if (this.id == o.id)
+        else if (this.distance == o.distance)
             return 0;
         else
             return 1;

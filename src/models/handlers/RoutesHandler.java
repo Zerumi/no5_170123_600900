@@ -126,7 +126,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     }
 
     /**
-     *
+     * Validates all elements in collection
      */
     @Override
     public void validateElements() {
@@ -143,5 +143,28 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
                 System.out.println("This element violates the restriction of some fields. Check your file and fix it manually.");
             }
         }
+    }
+
+    /**
+     * Gets min element by given comparator
+     *
+     * @param comparator Comparator to compare.
+     * @return Min element or null if collection is empty
+     */
+    @Override
+    public Route getMin(Comparator<Route> comparator) {
+
+        return getCollection().stream().min(comparator).orElse(null);
+    }
+
+    /**
+     * Gets max element by given comparator
+     *
+     * @param comparator Comparator to compare.
+     * @return Max element or null if collection is empty
+     */
+    @Override
+    public Route getMax(Comparator<Route> comparator) {
+        return getCollection().stream().max(comparator).orElse(null);
     }
 }
